@@ -17,7 +17,7 @@
     }
   }
 
-  aside {
+  aside:not(.blurb) {
     display: block;
     font-family: $sansSerifFontFamily;
     color: var(--aside-color);

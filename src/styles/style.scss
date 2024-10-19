@@ -11,3 +11,138 @@
   border: 2px solid var(--text-color);
   box-shadow: 3px 4px 7px 0px rgba($black,0.4)
 }
+
+html:not(.dark) {
+  aside.blurb.red {
+    --notice-border-color: #{$lightNoticeRedColor};
+    --notice-background-color: #{$lightNoticeRedBackgroundColor};
+  }
+
+  aside.blurb.orange {
+    --notice-border-color: #{$lightNoticeOrangeColor};
+    --notice-background-color: #{$lightNoticeOrangeBackgroundColor};
+  }
+
+  aside.blurb.yellow {
+    --notice-border-color: #{$lightNoticeYellowColor};
+    --notice-background-color: #{$lightNoticeYellowBackgroundColor};
+  }
+
+  aside.blurb.green {
+    --notice-border-color: #{$lightNoticeGreenColor};
+    --notice-background-color: #{$lightNoticeGreenBackgroundColor};
+  }
+
+  aside.blurb.cyan {
+    --notice-border-color: #{$lightNoticeCyanColor};
+    --notice-background-color: #{$lightNoticeCyanBackgroundColor};
+  }
+
+  aside.blurb.blue {
+    --notice-border-color: #{$lightNoticeBlueColor};
+    --notice-background-color: #{$lightNoticeBlueBackgroundColor};
+  }
+
+  aside.blurb.purple {
+    --notice-border-color: #{$lightNoticePurpleColor};
+    --notice-background-color: #{$lightNoticePurpleBackgroundColor};
+  }
+
+  aside.blurb.magenta {
+    --notice-border-color: #{$lightNoticeMagentaColor};
+    --notice-background-color: #{$lightNoticeMagentaBackgroundColor};
+  }
+}
+
+html.dark {
+  @include darkModeColors;
+
+  aside.blurb.red {
+    --notice-border-color: #{$darkNoticeRedColor};
+    --notice-background-color: #{$darkNoticeRedBackgroundColor};
+  }
+
+  aside.blurb.orange {
+    --notice-border-color: #{$darkNoticeOrangeColor};
+    --notice-background-color: #{$darkNoticeOrangeBackgroundColor};
+  }
+
+  aside.blurb.yellow {
+    --notice-border-color: #{$darkNoticeYellowColor};
+    --notice-background-color: #{$darkNoticeYellowBackgroundColor};
+  }
+
+  aside.blurb.green {
+    --notice-border-color: #{$darkNoticeGreenColor};
+    --notice-background-color: #{$darkNoticeGreenBackgroundColor};
+  }
+
+  aside.blurb.cyan {
+    --notice-border-color: #{$darkNoticeCyanColor};
+    --notice-background-color: #{$darkNoticeCyanBackgroundColor};
+  }
+
+  aside.blurb.blue {
+    --notice-border-color: #{$darkNoticeBlueColor};
+    --notice-background-color: #{$darkNoticeBlueBackgroundColor};
+  }
+
+  aside.blurb.purple {
+    --notice-border-color: #{$darkNoticePurpleColor};
+    --notice-background-color: #{$darkNoticePurpleBackgroundColor};
+  }
+
+  aside.blurb.magenta {
+    --notice-border-color: #{$darkNoticeMagentaColor};
+    --notice-background-color: #{$darkNoticeMagentaBackgroundColor};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root,
+  html:not(.light),
+  html.dark {
+    aside {
+      .blurb.red {
+        --notice-border-color: #{$darkNoticeRedColor};
+        --notice-background-color: #{$darkNoticeRedBackgroundColor};
+      }
+
+      .blurb.orange {
+        --notice-border-color: #{$darkNoticeOrangeColor};
+        --notice-background-color: #{$darkNoticeOrangeBackgroundColor};
+      }
+
+      .blurb.yellow {
+        --notice-border-color: #{$darkNoticeYellowColor};
+        --notice-background-color: #{$darkNoticeYellowBackgroundColor};
+      }
+
+      .blurb.green {
+        --notice-border-color: #{$darkNoticeGreenColor};
+        --notice-background-color: #{$darkNoticeGreenBackgroundColor};
+      }
+
+      .blurb.cyan {
+        --notice-border-color: #{$darkNoticeCyanColor};
+        --notice-background-color: #{$darkNoticeCyanBackgroundColor};
+      }
+
+      .blurb.blue {
+        --notice-border-color: #{$darkNoticeBlueColor};
+        --notice-background-color: #{$darkNoticeBlueBackgroundColor};
+      }
+
+      .blurb.purple {
+        --notice-border-color: #{$darkNoticePurpleColor};
+        --notice-background-color: #{$darkNoticePurpleBackgroundColor};
+      }
+
+      .blurb.magenta {
+        --notice-border-color: #{$darkNoticeMagentaColor};
+        --notice-background-color: #{$darkNoticeMagentaBackgroundColor};
+      }
+    }
+  }
+}

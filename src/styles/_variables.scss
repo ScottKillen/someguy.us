@@ -197,46 +197,6 @@ $lightBlurbBackgroundColor: rgba($lightBaseColor, 0.2);
 :root,
 html:not(.dark) {
   @include lightModeColors;
-
-  .notice.red {
-    --notice-border-color: #{$lightNoticeRedColor};
-    --notice-background-color: #{$lightNoticeRedBackgroundColor};
-  }
-
-  .notice.orange {
-    --notice-border-color: #{$lightNoticeOrangeColor};
-    --notice-background-color: #{$lightNoticeOrangeBackgroundColor};
-  }
-
-  .notice.yellow {
-    --notice-border-color: #{$lightNoticeYellowColor};
-    --notice-background-color: #{$lightNoticeYellowBackgroundColor};
-  }
-
-  .notice.green {
-    --notice-border-color: #{$lightNoticeGreenColor};
-    --notice-background-color: #{$lightNoticeGreenBackgroundColor};
-  }
-
-  .notice.cyan {
-    --notice-border-color: #{$lightNoticeCyanColor};
-    --notice-background-color: #{$lightNoticeCyanBackgroundColor};
-  }
-
-  .notice.blue {
-    --notice-border-color: #{$lightNoticeBlueColor};
-    --notice-background-color: #{$lightNoticeBlueBackgroundColor};
-  }
-
-  .notice.purple {
-    --notice-border-color: #{$lightNoticePurpleColor};
-    --notice-background-color: #{$lightNoticePurpleBackgroundColor};
-  }
-
-  .notice.magenta {
-    --notice-border-color: #{$lightNoticeMagentaColor};
-    --notice-background-color: #{$lightNoticeMagentaBackgroundColor};
-  }
 }
 
 // Dark mode colors
@@ -331,46 +291,5 @@ html.dark {
   html:not(.light),
   html.dark {
     @include darkModeColors;
-
-    .notice.red {
-      --notice-border-color: #{$darkNoticeRedColor};
-      --notice-background-color: #{$darkNoticeRedBackgroundColor};
-    }
-
-    .notice.orange {
-      --notice-border-color: #{$darkNoticeOrangeColor};
-      --notice-background-color: #{$darkNoticeOrangeBackgroundColor};
-    }
-
-    .notice.yellow {
-      --notice-border-color: #{$darkNoticeYellowColor};
-      --notice-background-color: #{$darkNoticeYellowBackgroundColor};
-    }
-
-    .notice.green {
-      --notice-border-color: #{$darkNoticeGreenColor};
-      --notice-background-color: #{$darkNoticeGreenBackgroundColor};
-    }
-
-    .notice.cyan {
-      --notice-border-color: #{$darkNoticeCyanColor};
-      --notice-background-color: #{$darkNoticeCyanBackgroundColor};
-    }
-
-    .notice.blue {
-      --notice-border-color: #{$darkNoticeBlueColor};
-      --notice-background-color: #{$darkNoticeBlueBackgroundColor};
-    }
-
-    .notice.purple {
-      --notice-border-color: #{$darkNoticePurpleColor};
-      --notice-background-color: #{$darkNoticePurpleBackgroundColor};
-    }
-
-    .notice.magenta {
-      --notice-border-color: #{$darkNoticeMagentaColor};
-      --notice-background-color: #{$darkNoticeMagentaBackgroundColor};
-    }
-
   }
 }
