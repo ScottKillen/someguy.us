@@ -44,7 +44,7 @@ This is a quote:
 
 > Proin at leo porttitor, molestie sapien ac, eleifend nibh. Etiam a rutrum turpis, vitae ultricies mi. Mauris posuere urna lectus, vitae porta est mollis vitae. Pellentesque sit amet nibh et erat fringilla egestas eget sit amet dui. Ut placerat tempor euismod. Nam vitae tortor convallis, porta mauris eu, rutrum nisl. Mauris justo nibh, elementum id mi sit amet, pellentesque ullamcorper quam. Nam cursus vel mi lobortis ultrices.
 
-Ut a nisi non est tristique viverra eget a nibh. Maecenas id velit sit amet turpis sollicitudin tincidunt. Vestibulum pharetra lectus nec felis faucibus suscipit. Praesent eu orci risus. **HERE'S A FOOTNOTE:** [^1] Vivamus luctus feugiat neque pretium ultrices. Donec dignissim eros vitae nunc porttitor mattis. Duis eu velit pulvinar, viverra neque aliquet, accumsan mauris. Pellentesque sollicitudin tincidunt elit sed tincidunt.
+Ut a nisi non est tristique viverra eget a nibh. Maecenas id velit sit amet turpis sollicitudin tincidunt. Vestibulum pharetra lectus nec felis faucibus suscipit. Praesent eu orci risus. **HERE'S A FOOTNOTE:** [^1] Vivamus [[luctus]] feugiat neque pretium ultrices. Donec dignissim eros vitae nunc porttitor mattis. Duis eu velit pulvinar, viverra neque aliquet, accumsan mauris. Pellentesque sollicitudin tincidunt elit sed tincidunt.
 
 Some code:
 
@@ -59,6 +59,6 @@ int main() {
 }
 ```
 
-<kbd>Some keyboard shortcout</kbd> maximus auctor fermentum. Morbi `some inline code`. Pellentesque congue venenatis elit. Quisque semper convallis orci eu condimentum. Duis nec consectetur nulla, vitae aliquam tortor. Aenean fringilla, arcu vel euismod consequat, risus quam finibus purus, vitae ultricies mauris enim eget orci. Cras ac hendrerit orci, in aliquet quam. Etiam mollis porta ante et molestie. Donec hendrerit justo at molestie faucibus. Morbi commodo porta orci ullamcorper pellentesque. Donec et malesuada tortor. Aliquam dapibus eu mi eget varius. Integer feugiat odio orci, sed lacinia ipsum malesuada non. Pellentesque aliquet pellentesque tortor. Nam vel dictum dui. Vivamus vitae diam egestas, hendrerit massa sed, molestie nulla.
+[[Some keyboard shortcout]] maximus auctor fermentum. Morbi `some inline code`. Pellentesque congue venenatis elit. Quisque semper convallis orci eu condimentum. Duis nec consectetur nulla, vitae aliquam tortor. Aenean fringilla, arcu vel euismod consequat, risus quam finibus purus, vitae ultricies mauris enim eget orci. Cras ac hendrerit orci, in aliquet quam. Etiam mollis porta ante et molestie. Donec hendrerit justo at molestie faucibus. Morbi commodo porta orci ullamcorper pellentesque. Donec et malesuada tortor. Aliquam dapibus eu mi eget varius. Integer feugiat odio orci, sed lacinia ipsum malesuada non. Pellentesque aliquet pellentesque tortor. Nam vel dictum dui. Vivamus vitae diam egestas, hendrerit massa sed, molestie nulla.
 
-[^1]: This is a footnote.
+[^1]: This is a [[footnote]].
