@@ -32,7 +32,7 @@ module.exports = {
     // with {% currentYear %} expression
     // so that you don't have to update the copyright year
     // in your footer by hand ever again :)
-    startYear: 2024,
+    // startYear: 2024,
     // Generator information to display in <html> tag and the site footer.
     // Absolutely optional, but it will make Zach Leatherman happy :)
     // Also, it makes you eligible to be featured on Speedlify:
