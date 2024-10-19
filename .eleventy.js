@@ -49,6 +49,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(name, body);
   });
 
+  eleventyConfig.addPairedShortcode('notice', (content, className = '') => {
+    const classAttribute = className ? `notice ${className}` : 'notice';
+    return `<div class="${classAttribute}">${content}</div>`;
+  });
+
   // --- Plugins
 
   Object.values(plugins).forEach(({ body, options }) => {

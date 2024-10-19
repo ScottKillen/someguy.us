@@ -121,8 +121,24 @@ $lightLinkHoverColor: color.adjust($lightLinkColor, $lightness: 35%);
 $lightPostMetaColor: $lightTextColor;
 $lightTopMetaColor: $flexoki-600;
 $lightBottomMetaColor: $lightTopMetaColor;
-$lightNoticeBorderColor: $lightBaseColor;
-$lightNoticeBackgroundColor: color.adjust($lightBaseColor, $lightness: 45%);
+$lightNoticeBorderColor: $flexoki-300;
+$lightNoticeBackgroundColor: color.adjust($flexoki-300, $lightness: 45%);
+$lightNoticeRedColor: $flexoki-red-600;
+$lightNoticeRedBackgroundColor: color.adjust($lightNoticeRedColor, $lightness: 45%);
+$lightNoticeOrangeColor: $flexoki-orange-600;
+$lightNoticeOrangeBackgroundColor: color.adjust($lightNoticeOrangeColor, $lightness: 45%);
+$lightNoticeYellowColor: $flexoki-yellow-600;
+$lightNoticeYellowBackgroundColor: color.adjust($lightNoticeYellowColor, $lightness: 45%);
+$lightNoticeGreenColor: $flexoki-green-600;
+$lightNoticeGreenBackgroundColor: color.adjust($lightNoticeGreenColor, $lightness: 45%);
+$lightNoticeCyanColor: $flexoki-cyan-600;
+$lightNoticeCyanBackgroundColor: color.adjust($lightNoticeCyanColor, $lightness: 45%);
+$lightNoticeBlueColor: $flexoki-blue-600;
+$lightNoticeBlueBackgroundColor: color.adjust($lightNoticeBlueColor, $lightness: 45%);
+$lightNoticePurpleColor: $flexoki-purple-600;
+$lightNoticePurpleBackgroundColor: color.adjust($lightNoticePurpleColor, $lightness: 45%);
+$lightNoticeMagentaColor: $flexoki-magenta-600;
+$lightNoticeMagentaBackgroundColor: color.adjust($lightNoticeMagentaColor, $lightness: 45%);
 $lightCodeBackgroundColor: color.adjust($lightBaseColor, $lightness: 45%);
 $lightCodeSelectionBackgroundColor: color.adjust($lightBaseColor, $lightness: 33%);
 $lightMarkBackgroundColor: color.adjust($lightBaseColor, $lightness: 55%);
@@ -181,6 +197,46 @@ $lightBlurbBackgroundColor: rgba($lightBaseColor, 0.2);
 :root,
 html:not(.dark) {
   @include lightModeColors;
+
+  .notice.red {
+    --notice-border-color: #{$lightNoticeRedColor};
+    --notice-background-color: #{$lightNoticeRedBackgroundColor};
+  }
+
+  .notice.orange {
+    --notice-border-color: #{$lightNoticeOrangeColor};
+    --notice-background-color: #{$lightNoticeOrangeBackgroundColor};
+  }
+
+  .notice.yellow {
+    --notice-border-color: #{$lightNoticeYellowColor};
+    --notice-background-color: #{$lightNoticeYellowBackgroundColor};
+  }
+
+  .notice.green {
+    --notice-border-color: #{$lightNoticeGreenColor};
+    --notice-background-color: #{$lightNoticeGreenBackgroundColor};
+  }
+
+  .notice.cyan {
+    --notice-border-color: #{$lightNoticeCyanColor};
+    --notice-background-color: #{$lightNoticeCyanBackgroundColor};
+  }
+
+  .notice.blue {
+    --notice-border-color: #{$lightNoticeBlueColor};
+    --notice-background-color: #{$lightNoticeBlueBackgroundColor};
+  }
+
+  .notice.purple {
+    --notice-border-color: #{$lightNoticePurpleColor};
+    --notice-background-color: #{$lightNoticePurpleBackgroundColor};
+  }
+
+  .notice.magenta {
+    --notice-border-color: #{$lightNoticeMagentaColor};
+    --notice-background-color: #{$lightNoticeMagentaBackgroundColor};
+  }
 }
 
 // Dark mode colors
@@ -192,8 +248,24 @@ $darkLinkHoverColor: color.adjust($darkLinkColor, $lightness: -15%);
 $darkPostMetaColor: $darkTextColor;
 $darkTopMetaColor: $flexoki-500;
 $darkBottomMetaColor: $darkTopMetaColor;
-$darkNoticeBorderColor: $darkBaseColor;
-$darkNoticeBackgroundColor: color.adjust($darkBaseColor, $lightness: -45%);
+$darkNoticeBorderColor: $flexoki-700;
+$darkNoticeBackgroundColor: color.adjust($flexoki-300, $lightness: -45%);
+$darkNoticeRedColor: $flexoki-red-400;
+$darkNoticeRedBackgroundColor: color.adjust($lightNoticeRedColor, $lightness: -20%);
+$darkNoticeOrangeColor: $flexoki-orange-400;
+$darkNoticeOrangeBackgroundColor: color.adjust($lightNoticeOrangeColor, $lightness: -20%);
+$darkNoticeYellowColor: $flexoki-yellow-400;
+$darkNoticeYellowBackgroundColor: color.adjust($lightNoticeYellowColor, $lightness: -20%);
+$darkNoticeGreenColor: $flexoki-green-400;
+$darkNoticeGreenBackgroundColor: color.adjust($lightNoticeGreenColor, $lightness: -20%);
+$darkNoticeCyanColor: $flexoki-cyan-400;
+$darkNoticeCyanBackgroundColor: color.adjust($lightNoticeCyanColor, $lightness: -20%);
+$darkNoticeBlueColor: $flexoki-blue-400;
+$darkNoticeBlueBackgroundColor: color.adjust($lightNoticeBlueColor, $lightness: -20%);
+$darkNoticePurpleColor: $flexoki-purple-400;
+$darkNoticePurpleBackgroundColor: color.adjust($lightNoticePurpleColor, $lightness: -20%);
+$darkNoticeMagentaColor: $flexoki-magenta-400;
+$darkNoticeMagentaBackgroundColor: color.adjust($lightNoticeMagentaColor, $lightness: -20%);
 $darkCodeBackgroundColor: color.adjust($darkBaseColor, $lightness: -50%);
 $darkCodeSelectionBackgroundColor: color.adjust($black, $lightness: -16%);
 $darkMarkBackgroundColor: color.adjust($darkLinkHoverColor, $lightness: -25%);
@@ -259,5 +331,46 @@ html.dark {
   html:not(.light),
   html.dark {
     @include darkModeColors;
+
+    .notice.red {
+      --notice-border-color: #{$darkNoticeRedColor};
+      --notice-background-color: #{$darkNoticeRedBackgroundColor};
+    }
+
+    .notice.orange {
+      --notice-border-color: #{$darkNoticeOrangeColor};
+      --notice-background-color: #{$darkNoticeOrangeBackgroundColor};
+    }
+
+    .notice.yellow {
+      --notice-border-color: #{$darkNoticeYellowColor};
+      --notice-background-color: #{$darkNoticeYellowBackgroundColor};
+    }
+
+    .notice.green {
+      --notice-border-color: #{$darkNoticeGreenColor};
+      --notice-background-color: #{$darkNoticeGreenBackgroundColor};
+    }
+
+    .notice.cyan {
+      --notice-border-color: #{$darkNoticeCyanColor};
+      --notice-background-color: #{$darkNoticeCyanBackgroundColor};
+    }
+
+    .notice.blue {
+      --notice-border-color: #{$darkNoticeBlueColor};
+      --notice-background-color: #{$darkNoticeBlueBackgroundColor};
+    }
+
+    .notice.purple {
+      --notice-border-color: #{$darkNoticePurpleColor};
+      --notice-background-color: #{$darkNoticePurpleBackgroundColor};
+    }
+
+    .notice.magenta {
+      --notice-border-color: #{$darkNoticeMagentaColor};
+      --notice-background-color: #{$darkNoticeMagentaBackgroundColor};
+    }
+
   }
 }
