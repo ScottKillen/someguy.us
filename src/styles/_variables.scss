@@ -1,16 +1,59 @@
 @use 'sass:color';
 
+// Flexoki colors
+$flexoki-black:       #100F0F;
+$flexoki-950:         #1C1B1A;
+$flexoki-900:         #282726;
+$flexoki-850:         #343331;
+$flexoki-800:         #403E3C;
+$flexoki-700:         #575653;
+$flexoki-600:         #6F6E69;
+$flexoki-500:         #878580;
+$flexoki-300:         #B7B5AC;
+$flexoki-200:         #CECDC3;
+$flexoki-150:         #DAD8CE;
+$flexoki-100:         #E6E4D9;
+$flexoki-50:          #F2F0E5;
+$flexoki-paper:       #FFFCF0;
+
+$flexoki-red-600:     #AF3029;
+$flexoki-red-400:     #D14D41;
+
+$flexoki-orange-600:  #BC5215;
+$flexoki-orange-400:  #DA702C;
+
+$flexoki-yellow-900:  #4D3A0B;
+$flexoki-yellow-600:  #AD8301;
+$flexoki-yellow-400:  #D0A215;
+$flexoki-yellow-100:  #FCEEB8;
+
+$flexoki-green-600:   #66800B;
+$flexoki-green-400:   #879A39;
+
+$flexoki-cyan-950:    #142625;
+$flexoki-cyan-600:    #24837B;
+$flexoki-cyan-400:    #3AA99F;
+$flexoki-cyan-50:     #EBF2E7;
+
+$flexoki-blue-600:    #205EA6;
+$flexoki-blue-400:    #4385BE;
+
+$flexoki-purple-600:  #5E409D;
+$flexoki-purple-400:  #8B7EC8;
+
+$flexoki-magenta-600: #A02F6F;
+$flexoki-magenta-400: #CE5D97;
+
 // Base values
 
 $baseSize: 16px;
 
 // Base colors
 
-$baseHue: 260;
-
-$baseColor: hsl($baseHue, 80%, 50%);
-$white: hsl($baseHue, 80%, 98%);
-$black: hsl($baseHue, 5%, 10%);
+$darkBaseColor: $flexoki-purple-400;
+$lightBaseColor: $flexoki-purple-600;
+$white: $flexoki-paper;
+$black: $flexoki-black;
 
 // Fonts
 
@@ -65,26 +108,25 @@ $longTransitionTime: 0.2s;
   --emoji-font-family: #{$emojiFontFamily};
   --heading-font-family: #{$sansSerifFontFamily};
   --read-more-hover-color: #{$white};
-  --base-color: #{$baseColor};
   --default-transition-time: #{$defaultTransitionTime};
   --long-transition-time: #{$longTransitionTime};
 }
 
 // Light mode colors
 
-$lightBackgroundColor: $white;
-$lightTextColor: $black;
-$lightLinkColor: color.adjust($baseColor, $lightness: -5%);
-$lightLinkHoverColor: color.adjust($lightLinkColor, $lightness: 15%);
+$lightBackgroundColor: $flexoki-paper;
+$lightTextColor: $flexoki-black;
+$lightLinkColor: color.adjust($lightBaseColor, $lightness: -15%);
+$lightLinkHoverColor: color.adjust($lightLinkColor, $lightness: 35%);
 $lightPostMetaColor: $lightTextColor;
-$lightTopMetaColor: color.adjust($black, $lightness: 40%);
+$lightTopMetaColor: $flexoki-600;
 $lightBottomMetaColor: $lightTopMetaColor;
-$lightNoticeBorderColor: $baseColor;
-$lightNoticeBackgroundColor: color.adjust($baseColor, $lightness: 45%);
-$lightCodeBackgroundColor: color.adjust($baseColor, $lightness: 45%);
-$lightCodeSelectionBackgroundColor: color.adjust($baseColor, $lightness: 33%);
-$lightMarkBackgroundColor: color.adjust($baseColor, $lightness: 55%);
-$lightMarkColor: $black;
+$lightNoticeBorderColor: $lightBaseColor;
+$lightNoticeBackgroundColor: color.adjust($lightBaseColor, $lightness: 45%);
+$lightCodeBackgroundColor: color.adjust($lightBaseColor, $lightness: 45%);
+$lightCodeSelectionBackgroundColor: color.adjust($lightBaseColor, $lightness: 33%);
+$lightMarkBackgroundColor: color.adjust($lightBaseColor, $lightness: 55%);
+$lightMarkColor: $lightTextColor;
 $lightAsideColor: $lightLinkColor;
 $lightThemeSwitcherColor: $lightLinkColor;
 $lightMobileMenuBackgroundColor: $lightBackgroundColor;
@@ -99,14 +141,13 @@ $lightScrollUpArrowHoverBackgroundColor: color.adjust(
 );
 $lightPaginationColor: $lightTextColor;
 $lightPaginationFocusBackgroundColor: $lightNoticeBackgroundColor;
-$lightPaginationInactiveColor: color.adjust(
-  $lightPostMetaColor,
-  $lightness: 25%
-);
+$lightPaginationInactiveColor: $flexoki-300;
 $lightPaginationJumpButtonBackgroundColor: $lightPaginationInactiveColor;
-$lightFooterSeparatorColor: color.adjust($black, $lightness: 76%);
+$lightFooterSeparatorColor: $flexoki-150;
+$lightBlurbBackgroundColor: rgba($lightBaseColor, 0.2);
 
 @mixin lightModeColors {
+  --base-color: #{$lightBaseColor};
   --background-color: #{$lightBackgroundColor};
   --text-color: #{$lightTextColor};
   --link-color: #{$lightLinkColor};
@@ -133,6 +174,8 @@ $lightFooterSeparatorColor: color.adjust($black, $lightness: 76%);
   --pagination-inactive-color: #{$lightPaginationInactiveColor};
   --pagination-jump-button-background-color: #{$lightPaginationJumpButtonBackgroundColor};
   --footer-separator-color: #{$lightFooterSeparatorColor};
+  --blurb-background-color: #{$lightBlurbBackgroundColor};
+  --blurb-border-color: #{$lightBaseColor};
 }
 
 :root,
@@ -142,16 +185,16 @@ html:not(.dark) {
 
 // Dark mode colors
 
-$darkBackgroundColor: $black;
-$darkTextColor: hsl($baseHue, 5%, 70%);
-$darkLinkColor: hsl($baseHue, 60%, 75%);
-$darkLinkHoverColor: color.adjust($darkLinkColor, $lightness: -10%);
+$darkBackgroundColor: $flexoki-black;
+$darkTextColor: $flexoki-200;
+$darkLinkColor: color.adjust($darkBaseColor, $lightness: 5%);
+$darkLinkHoverColor: color.adjust($darkLinkColor, $lightness: -15%);
 $darkPostMetaColor: $darkTextColor;
-$darkTopMetaColor: color.adjust($darkTextColor, $lightness: -10%);
+$darkTopMetaColor: $flexoki-500;
 $darkBottomMetaColor: $darkTopMetaColor;
-$darkNoticeBorderColor: color.adjust($baseColor, $lightness: -2%);
-$darkNoticeBackgroundColor: color.adjust($black, $lightness: -3%);
-$darkCodeBackgroundColor: color.adjust($black, $lightness: -3%);
+$darkNoticeBorderColor: $darkBaseColor;
+$darkNoticeBackgroundColor: color.adjust($darkBaseColor, $lightness: -45%);
+$darkCodeBackgroundColor: color.adjust($darkBaseColor, $lightness: -50%);
 $darkCodeSelectionBackgroundColor: color.adjust($black, $lightness: -16%);
 $darkMarkBackgroundColor: color.adjust($darkLinkHoverColor, $lightness: -25%);
 $darkMarkColor: $darkTextColor;
@@ -170,14 +213,13 @@ $darkScrollUpArrowHoverBackgroundColor: color.adjust(
 $darkPaginationPageNumberInputTextColor: $darkTextColor;
 $darkPaginationColor: color.adjust($black, $lightness: -55%);
 $darkPaginationFocusBackgroundColor: $darkNoticeBackgroundColor;
-$darkPaginationInactiveColor: color.adjust(
-  $darkPostMetaColor,
-  $lightness: -18%
-);
+$darkPaginationInactiveColor: $flexoki-700;
 $darkPaginationJumpButtonBackgroundColor: $darkPaginationInactiveColor;
-$darkFooterSeparatorColor: color.adjust($black, $lightness: 10%);
+$darkFooterSeparatorColor: $flexoki-850;
+$darkBlurbBackgroundColor: rgba($darkBaseColor, 0.2);
 
 @mixin darkModeColors {
+  --base-color: #{$darkBaseColor};
   --background-color: #{$darkBackgroundColor};
   --text-color: #{$darkTextColor};
   --link-color: #{$darkLinkColor};
@@ -204,6 +246,8 @@ $darkFooterSeparatorColor: color.adjust($black, $lightness: 10%);
   --pagination-inactive-color: #{$darkPaginationInactiveColor};
   --pagination-jump-button-background-color: #{$darkPaginationJumpButtonBackgroundColor};
   --footer-separator-color: #{$darkFooterSeparatorColor};
+  --blurb-background-color: #{$darkBlurbBackgroundColor};
+  --blurb-border-color: #{$darkBaseColor};
 }
 
 html.dark {
