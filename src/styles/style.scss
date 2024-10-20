@@ -12,6 +12,20 @@
   box-shadow: 3px 4px 7px 0px rgba($black,0.4)
 }
 
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.scroll-up-arrow {
+  .bi {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--background-color);
+  }
+}
 html:not(.dark) {
   div.author-info {
       color: $lightPostMetaColor;

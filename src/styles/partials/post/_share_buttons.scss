@@ -50,6 +50,9 @@
       align-items: center;
       position: relative;
 
+      .bi {
+          color: var(--link-color);
+        }
       svg {
         width: 1rem;
         height: 1rem;

@@ -40,10 +40,7 @@
 *.tif      binary
 *.tiff     binary
 *.ico      binary
-# SVG treated as text by default.
 *.svg      text
-# If you want to treat it as binary,
-# use the following line instead.
 # *.svg    binary
 *.eps      binary
 
