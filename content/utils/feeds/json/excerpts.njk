@@ -12,9 +12,10 @@ eleventyExcludeFromCollections: true
   "items": [
     {%- for post in collections.publishedPosts|limit(itemLimit) %}
     {%- set absolutePostUrl %}{{ post.url | alwaysProductionUrl }}{% endset -%}
+    {%- set postExcerpt %}{% if post.data.description %}{{ post.data.description }}{% else %}{%- excerpt post %}{% endif %}{% endset -%}
     {
       {%- include "partials/feeds/json/item-meta.njk" -%}
-      "content_html": "{%- include "partials/feeds/disclaimer.njk" -%}&lt;p&gt;{%- excerpt post %}&lt;/p&gt;{%- include "partials/feeds/keep-reading.njk" -%}"
+      "content_html": "{%- include "partials/feeds/disclaimer.njk" -%}&lt;p&gt;{{ postExcerpt }}&lt;/p&gt;{%- include "partials/feeds/keep-reading.njk" -%}"
     }
     {%- if not loop.last -%}
     ,
