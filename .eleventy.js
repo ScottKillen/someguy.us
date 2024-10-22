@@ -49,9 +49,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(name, body);
   });
 
-  eleventyConfig.addPairedShortcode('notice', (content, className = '') => {
-    const classAttribute = className ? `notice ${className}` : 'notice';
-    return `<div class="${classAttribute}">${content}</div>`;
+  eleventyConfig.addShortcode('img', (src, className) => {
+    return `<img src="${src}" class="${className}" />`;
   });
 
   // --- Plugins
