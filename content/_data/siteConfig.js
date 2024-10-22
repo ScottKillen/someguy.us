@@ -14,7 +14,7 @@ module.exports = {
     // OpenGraph tags and feeds.
     // It is also used as a fallback description if no custom description
     // is provided for a page / post.
-    description: 'SomeGuy\'s personal blog',
+    description: 'The personal site of Scott Killen (Just some guy™)',
     // Production URL. Used by 'alwaysProductionUrl' filter.
     // If none is provided, relative paths will be used
     // and in some cases (like sitemap.xml) that is TOTALLY NOT what you want
@@ -32,7 +32,7 @@ module.exports = {
     // with {% currentYear %} expression
     // so that you don't have to update the copyright year
     // in your footer by hand ever again :)
-    // startYear: 2024,
+    startYear: 2018,
     // Generator information to display in <html> tag and the site footer.
     // Absolutely optional, but it will make Zach Leatherman happy :)
     // Also, it makes you eligible to be featured on Speedlify:

@@ -1,3 +1,19 @@
+.dark {
+  .top-image {
+
+    img {
+      border: var(--top-meta-color) 1px solid;
+    }
+  }
+}
+
+.light {
+  .top-image {
+    img {
+      box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+    }
+  }
+}
 .single-article {
   h1 {
     margin-bottom: 1rem;
@@ -10,10 +26,15 @@
   .top-image {
     margin-bottom: 3rem;
 
+    img {
+        border-radius: 5px;
+      }
     .credit {
       margin-top: 0;
       margin-bottom: 0;
-      font-size: 1rem;
+      font-size: 0.875rem;
+        font-family: var(--arial-font-family);
+        color: var(--top-meta-color);
     }
   }
 
