@@ -8,12 +8,18 @@ eleventyNavigation:
 
 {% img '/images/scottkillen.jpg', 'myphoto' %}
 
-I'm {{ siteConfig.author.name }}.
+*[CPA]: Certified Public Accountant
+Welcome to my personal blog!  I'm {{ siteConfig.author.name }}, and I'm thrilled to have yoou here. I wear many wear manyu hats: I'm a former software engineer, a CPA, and a passionate gospel preacher.
 
-**{{ siteConfig.site.title }}** is my blog.
+I love spending time with my wife and have many hobbies. I am never bored.
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+## My Calling
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+The Bible says, "But seek first the kingdom of God and his righteousness...,"[^1] and to that end, I enjoy studying the Bible. Learning about Jesus and sharing His teaching brings me grat joy. I find it incredibly rewarding to help others navigate their spiritual journeys and grow in faith. Preaching at a small church in Edisto Island, South Carolina has been a fulfilling endeavor that allows me to fulfill the calling of sharing God's Word with others[^2].
 
-Image credit: [Orange Tabby Cat on Brown Knitted Textile by Alena Koval](https://www.pexels.com/photo/orange-tabby-cat-on-brown-knitted-textile-982300/)
+[^1]: [Matthew 6:33](https://www.esv.org/verses/Matthew%206%3A33/)
+[^2]: [Matthew 28:19–20](https://www.esv.org/verses/Matthew%2028%3A19-20/)
+
+## What You'll Find Here
+
+This blog is a medium for my expression of *my opinion* on whatever happens to be on my mind. If what you read here resonates and is useful to you, wonderful! If not, its OK. Remember, I am just Som Guy™.
