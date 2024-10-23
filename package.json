@@ -45,6 +45,7 @@
     "jsonminify": "^0.4.2",
     "lodash": "^4.17.21",
     "luxon": "^3.4.4",
+    "markdown-it-abbr": "^2.0.0",
     "markdown-it-anchor": "^9.0.1",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-kbd": "^2.2.2",

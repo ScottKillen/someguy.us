@@ -4,6 +4,7 @@ const markdownItFootnote = require('markdown-it-footnote');
 const { asidePlugin } = require('@humanwhocodes/markdown-it-markua-aside');
 const kbd = require('markdown-it-kbd');
 const slugify = require('slugify');
+const abbr = require('markdown-it-abbr');
 const {
   ASSETS_FOLDER,
   SCRIPTS_FOLDER,
@@ -29,7 +30,8 @@ module.exports = function (eleventyConfig) {
       .use(markdownItAnchor, MARKDOWN_IT_ANCHOR_OPTIONS)
       .use(markdownItFootnote)
       .use(asidePlugin)
-      .use(kbd),
+      .use(kbd)
+      .use(abbr),
   );
 
   eleventyConfig.addPassthroughCopy({
