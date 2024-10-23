@@ -59,23 +59,18 @@ $black: $flexoki-black;
 
 $baseSerifFontStack: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 $serifFontFamily: 'Merriweather', $baseSerifFontStack;
-$serifBoldFontFamily: 'Merriweather Bold', $baseSerifFontStack;
-$serifItalicFontFamily: 'Merriweather Italic', $baseSerifFontStack;
-$serifBoldItalicFontFamily: 'Merriweather Bold Italic', $baseSerifFontStack;
-$sansSerifFontFamily:
-  PT Sans,
-  ui-sans-serif,
-  system-ui,
-  -apple-system,
+$serifBoldFontFamily: 'Merriweather', $baseSerifFontStack;
+$serifItalicFontFamily: 'Merriweather', $baseSerifFontStack;
+$serifBoldItalicFontFamily: 'Merriweather', $baseSerifFontStack;
+$sansSerifFontFamily: system-ui, sans-serif;
+$arialFamily: -apple-system,
   BlinkMacSystemFont,
-  Segoe UI,
-  Roboto,
-  SF Pro,
-  Helvetica,
-  Arial,
-  Noto Sans,
-  sans-serif;
-$arialFamily: Arial, Helvetica, sans-serif;
+'Segoe UI',
+Roboto,
+'Helvetica Neue',
+Ubuntu,
+Arial,
+sans-serif;
 $emojiFontFamily:
   Apple Color Emoji,
   Segoe UI Emoji,
@@ -106,7 +101,8 @@ $longTransitionTime: 0.2s;
   --serif-bold-italic-font-family: #{$serifBoldItalicFontFamily};
   --arial-font-family: #{$arialFamily};
   --emoji-font-family: #{$emojiFontFamily};
-  --heading-font-family: #{$sansSerifFontFamily};
+                                --heading-font-family: "Source Sans 3",
+                                #{$sansSerifFontFamily};
   --read-more-hover-color: #{$white};
   --default-transition-time: #{$defaultTransitionTime};
   --long-transition-time: #{$longTransitionTime};

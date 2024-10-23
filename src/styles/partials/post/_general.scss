@@ -40,7 +40,8 @@
 
   aside:not(.blurb) {
     display: block;
-    font-family: $sansSerifFontFamily;
+    font-family: "Source Sans 3", $sansSerifFontFamily;
+      font-optical-sizing: auto;
     color: var(--aside-color);
     position: absolute;
     width: 15rem;

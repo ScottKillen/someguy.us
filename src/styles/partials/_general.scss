@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--text-font-family);
 
   &.no-scrollbar {
     overflow: hidden;
