@@ -82,9 +82,9 @@ module.exports = {
     // method of verification.
     fediverse: [
       {
-        username: 'killen',
-        server: 'social.lol',
-        url: 'https://social.lol/@killen',
+        username: 'scottkillen',
+        server: 'mastodon.social',
+        url: 'https://mastodon.social/@scottkillen',
       },
     ],
   },
