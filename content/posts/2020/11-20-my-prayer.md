@@ -1,6 +1,7 @@
 ---
 title: My Prayer
-description: A poem
+description: A poem about humility.
+excerpt: A poem about humility.
 date: 2020-11-20
 tags:
   - poetry

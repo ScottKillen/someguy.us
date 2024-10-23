@@ -7,11 +7,7 @@
       <h2 class="post-title">{{ post.data.title }}</h2>
     </header>
     <div class="excerpt">
-      {% if post.data.description %}
-        {{ post.data.description }}
-      {% else %}
-        {% excerpt post %}
-      {% endif %}
+      {% excerpt post %}
     </div>
     <div class="post-meta">
         <time>{{ postDate }}</time>

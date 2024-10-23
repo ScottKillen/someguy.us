@@ -1,6 +1,7 @@
 ---
 title: Daybreak
-description: A poem about awakening and renewal at morning
+description: A poem about awakening and renewal at morning.
+excerpt: A poem about awakening and renewal at morning.
 date: 2021-07-21
 tags:
   - poetry

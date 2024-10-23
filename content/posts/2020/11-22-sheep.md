@@ -1,6 +1,7 @@
 ---
 title: Sheep
-description: A haiku
+description: A haiku.
+excerpt: A haiku.
 date: 2020-11-22
 tags:
   - poetry

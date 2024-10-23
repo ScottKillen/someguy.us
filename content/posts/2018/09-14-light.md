@@ -1,6 +1,7 @@
 ---
 title: Light
-description: A poem about the Light
+description: A poem about the Light.
+excerpt: A poem about the Light.
 date: 2018-09-14
 tags:
   - poetry

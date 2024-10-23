@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
 {%- include "partials/feeds/rss/feed-meta.njk" %}
 {%- for post in collections.publishedPosts|limit(postLimit) -%}
 {%- set absolutePostUrl -%}{{ post.url | alwaysProductionUrl }}{%- endset -%}
-{%- set postExcerpt %}{% if post.data.description %}{{ post.data.description }}{% else %}{%- excerpt post %}{% endif %}{% endset -%}
+{%- set postExcerpt %}{%- excerpt post %}{% endset -%}
 <entry>
 {%- include "partials/feeds/rss/entry-meta.njk" -%}
 <content type="html">

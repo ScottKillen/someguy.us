@@ -1,6 +1,7 @@
 ---
 title: Bound
 description: A poem about slavery, sin, and redemption.
+excerpt: A poem about slavery, sin, and redemption.
 date: 2023-09-26
 tags:
   - poetry
