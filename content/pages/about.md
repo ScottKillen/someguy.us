@@ -1,6 +1,7 @@
 ---
-title: About
-description: There are many variations of passages of Lorem Ipsum available.
+title: About Me
+description: About Scott Killen
+customPermalink: /about/
 eleventyNavigation:
   key: About
   order: 1
