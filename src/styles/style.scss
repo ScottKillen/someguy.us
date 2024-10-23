@@ -74,7 +74,10 @@ html:not(.dark) {
 html.dark {
   @include darkModeColors;
 
-div.author-info {
+  hr.footnotes-sep {
+      border-color: #{$flexoki-600};
+    }
+                                div.author-info {
     color: $darkPostMetaColor;
   }
   aside.blurb.red {
