@@ -2,32 +2,32 @@
   <ul>
     <li>
       <a href="{{ siteConfig.feed.excerpts.path }}">
-        <svg class="bi"><use href="#icon-rss" /></svg>
+        {% svgUse "rss", "bi" %}
         <span class="name">{{ siteConfig.feed.excerpts.title }}</span>
       </a>
     </li>
     <li>
       <a href="{{ siteConfig.feed.full.path }}">
-        <svg class="bi"><use href="#icon-rss" /></svg>
+        {% svgUse "rss", "bi" %}
         <span class="name">{{ siteConfig.feed.full.title }}</span>
       </a>
     </li>
     <li>
       <a href="{{ siteConfig.json.excerpts.path }}">
-        <svg class="bi"><use href="#icon-json-feed" /></svg>
+        {% svgUse "json-feed", "bi" %}
         <span class="name">{{ siteConfig.json.excerpts.title }}</span>
       </a>
     </li>
     <li>
       <a href="{{ siteConfig.json.full.path }}">
-        <svg class="bi"><use href="#icon-json-feed" /></svg>
+        {% svgUse "json-feed", "bi" %}
         <span class="name">{{ siteConfig.json.full.title }}</span>
       </a>
     </li>
     <li>
       <a href="{{ siteConfig.twtxt.path }}">
         <span class="twtxt-logo">
-          <svg class="bi"><use href="#icon-twtxt" /></svg>
+          {% svgUse "twtxt", "bi" %}
         </span>
         <span class="name">{{ siteConfig.twtxt.title }}</span>
       </a>

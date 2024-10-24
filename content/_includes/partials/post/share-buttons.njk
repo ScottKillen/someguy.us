@@ -16,7 +16,7 @@
       {% if shareButton == 'mastodon' %}
       <li>
         <div data-tooltip="{{ phrases.share_on }} Mastodon - {{ phrases.opens_prompt }}" class="mastodon" tabindex="0">
-          <svg class="bi"><use href="#icon-mastodon" /></svg>
+          {% svgUse "mastodon", "bi" %}
         </div>
       </li>
       {% endif %}
@@ -24,7 +24,7 @@
       {% if shareButton == 'x' %}
       <li>
         <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} X - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}" class="x">
-          <svg class="bi"><use href="#icon-x" /></svg>
+          {% svgUse "x", "bi" %}
         </a>
       </li>
       {% endif %}
@@ -32,7 +32,7 @@
       {% if shareButton == 'linkedin' %}
       <li>
         <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Linkedin - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin">
-          <svg class="bi"><use href="#icon-linkedin" /></svg>
+          {% svgUse "linkedin", "bi" %}
         </a>
       </li>
       {% endif %}
@@ -40,7 +40,7 @@
       {% if shareButton == 'facebook' %}
       <li>
         <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Facebook - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook">
-          <svg class="bi"><use href="#icon-facebook" /></svg>
+          {% svgUse "facebook", "bi" %}
         </a>
       </li>
       {% endif %}
@@ -48,7 +48,7 @@
       {% if shareButton == 'hackernews' %}
       <li>
         <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Hacker News - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews">
-          <svg class="bi"><use href="#icon-hackernews" /></svg>
+          {% svgUse "hackernews", "bi" %}
         </a>
       </li>
       {% endif %}
@@ -56,7 +56,7 @@
       {% if shareButton == 'clipboard' %}
       <li>
         <div class="clipboard" rel="noopener noreferrer" data-tooltip="{{ phrases.copy_to_clipboard }}" tabindex="0">
-          <svg class="bi"><use href="#icon-clipboard" /></svg>
+          {% svgUse "clipboard", "bi" %}
         </div>
       </li>
       {% endif %}
