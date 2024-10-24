@@ -49,10 +49,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(name, body);
   });
 
-  eleventyConfig.addShortcode('img', (src, className) => {
-    return `<img src="${src}" class="${className}" />`;
-  });
-
   // --- Plugins
 
   Object.values(plugins).forEach(({ body, options }) => {
