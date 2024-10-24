@@ -3,7 +3,8 @@
   <head>
     {% include "partials/head.njk" %}
   </head>
-  <body>
+  <body
+    class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     {% include "partials/header.njk" %}
     <div id="main" class="container{% if hasAsides %} with-asides{% endif %}">
       {{ content|safe }}
