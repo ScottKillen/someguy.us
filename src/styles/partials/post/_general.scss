@@ -14,6 +14,19 @@
     }
   }
 }
+.footnotes {
+  font-family: "Source Sans 3", $sansSerifFontFamily;
+  font-optical-sizing: auto;
+
+  li,
+  p {
+    font-size: 1.0375rem;
+  }
+
+  a {
+    text-underline-offset: 0 !important;
+  }
+}
 .single-article {
   h1 {
     margin-bottom: 1rem;
