@@ -93,16 +93,34 @@ module.exports = {
   // ---------------------------------------------------------------------------
   metaPages: [
     {
-      url: 'https://example.org/link-1/',
-      title: 'Example link 1',
+      url: 'https://github.com/ScottKillen',
+      title: 'GitHub',
+      icon: 'github',
     },
     {
-      url: 'https://example.org/link-2/',
-      title: 'Example link 2',
+      url: 'https://www.flickr.com/photos/scottkillen',
+      title: 'Flickr',
+      icon: 'flickr',
     },
     {
-      url: 'https://example.org/link-3/',
-      title: 'Example link 3',
+      url: 'https://open.spotify.com/user/sdkillen',
+      title: 'Spotify',
+      icon: 'spotify',
+    },
+    {
+      url: 'https://portfolio.pixelfed.social/scottkillen',
+      title: 'Pixelfed',
+      icon: 'pixelfed',
+    },
+    {
+      url: 'https://mastodon.social/@scottkillen',
+      title: 'Mastodon',
+      icon: 'mastodon',
+    },
+    {
+      url: 'https://x.com/scottkillen',
+      title: 'X',
+      icon: 'x',
     },
   ],
   // ---------------------------------------------------------------------------
