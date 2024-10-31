@@ -4,9 +4,16 @@ const lightSetting = 'light';
 
 const setTheme = (theme) => {
   const themeSettings = [lightSetting, darkSetting];
+  const toggleClass = 'theme-toggle--toggled';
+  const button = document.querySelector('[data-bs-theme-toggle]');
 
   if (themeSettings.includes(theme)) {
     document.documentElement.setAttribute('data-bs-theme', theme);
+    if (theme === darkSetting) {
+      button.classList.remove(toggleClass);
+    } else {
+      button.classList.add(toggleClass);
+    }
   }
 };
 
