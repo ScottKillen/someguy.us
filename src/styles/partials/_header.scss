@@ -16,8 +16,7 @@
 
   @import 'header/hamburger';
   @import 'header/site_logo';
-  @import 'header/main_nav';
-  @import 'header/theme_switcher';
+    @import 'header/main_nav';
   @import 'header/site_links';
 }
 
@@ -40,3 +39,5 @@
     background-color: var(--background-color);
   }
 }
+
+@import 'header/theme_switcher';

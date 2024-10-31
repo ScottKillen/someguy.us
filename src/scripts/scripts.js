@@ -2,22 +2,11 @@ const themeKey = 'theme';
 const darkSetting = 'dark';
 const lightSetting = 'light';
 
-const htmlElement = document.querySelector('html');
-
 const setTheme = (theme) => {
-  const themeSwitcherBtn = document.querySelector('.theme-switcher');
-
   const themeSettings = [lightSetting, darkSetting];
-  const [classToRemove, classToAdd] =
-    theme === lightSetting
-      ? [darkSetting, lightSetting]
-      : [lightSetting, darkSetting];
 
   if (themeSettings.includes(theme)) {
-    htmlElement.classList.remove(classToRemove);
-    themeSwitcherBtn.classList.remove(classToRemove);
-    htmlElement.classList.add(classToAdd);
-    themeSwitcherBtn.classList.add(classToAdd);
+    document.documentElement.setAttribute('data-bs-theme', theme);
   }
 };
 
@@ -51,7 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Dark theme (base switch logic)
 
   const handleThemeSwitch = () => {
-    const isDarkActive = htmlElement.classList.contains(darkSetting);
+    const isDarkActive =
+      document.documentElement.getAttribute('data-bs-theme') === darkSetting;
     const desiredSetting = isDarkActive ? lightSetting : darkSetting;
     setTheme(desiredSetting);
 
@@ -92,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Theme switcher button
 
-  const themeSwitcherBtn = document.querySelector('.theme-switcher');
+  const themeSwitcherBtn = document.querySelector('[data-bs-theme-toggle]');
 
   themeSwitcherBtn.addEventListener('click', handleThemeSwitch);
   themeSwitcherBtn.addEventListener('keyup', handleThemeSwitchFromKeyboard);
@@ -169,7 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const postLists = document.querySelectorAll('.archive .list');
 
   const archiveYearHeadings = document.querySelectorAll(
-    `.archive ${yearHeadingSelector}`
+    `.archive ${yearHeadingSelector}`,
   );
 
   const handleArchiveToggle = (e) => {
@@ -222,7 +212,8 @@ window.addEventListener('DOMContentLoaded', () => {
       .split(/\/[0-9]+\//)[0]
       .replace(/\/+$/, '');
 
-    const newLocation = pageNumber === 1 ? pageUrl : `${pageUrl}/${pageNumber}/`;
+    const newLocation =
+      pageNumber === 1 ? pageUrl : `${pageUrl}/${pageNumber}/`;
 
     window.location.href = newLocation;
   };
@@ -232,7 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const currentPageNumber = parseInt(pageNumberInput.value);
 
     const totalPages = parseInt(
-      document.querySelector('.total-pages').innerHTML
+      document.querySelector('.total-pages').innerHTML,
     );
 
     const isPageNumberAllowed = (pageNumber) => {
@@ -297,26 +288,26 @@ window.addEventListener('DOMContentLoaded', () => {
   // Mastodon share button
 
   const mastodonShareForm = htmlElement.querySelector(
-    '.share-buttons .mastodon-share-form'
+    '.share-buttons .mastodon-share-form',
   );
 
   const mastodonShareButton = htmlElement.querySelector(
-    '.share-buttons .mastodon'
+    '.share-buttons .mastodon',
   );
   const mastodonShareDialog = htmlElement.querySelector(
-    '.share-buttons .mastodon-share-dialog'
+    '.share-buttons .mastodon-share-dialog',
   );
 
   const mastodonDialogCloseLink = htmlElement.querySelector(
-    '.mastodon-share-dialog .close-link'
+    '.mastodon-share-dialog .close-link',
   );
 
   const instanceUrlInput = htmlElement.querySelector(
-    '.mastodon-share-dialog .instance-url-input'
+    '.mastodon-share-dialog .instance-url-input',
   );
 
   const shareSubmitButton = htmlElement.querySelector(
-    '.mastodon-share-dialog .share-form-submit'
+    '.mastodon-share-dialog .share-form-submit',
   );
 
   const isMastodonInstanceValid = (value) => {
@@ -368,7 +359,7 @@ window.addEventListener('DOMContentLoaded', () => {
           encodeURIComponent(title) +
           ' ' +
           encodeURIComponent(href),
-        '_blank'
+        '_blank',
       );
     });
 
@@ -388,7 +379,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Copy to clipboard button
 
   const copyToClipboardButton = htmlElement.querySelector(
-    '.share-buttons .clipboard'
+    '.share-buttons .clipboard',
   );
 
   if (copyToClipboardButton) {
