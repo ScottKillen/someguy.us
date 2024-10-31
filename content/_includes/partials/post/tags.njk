@@ -1,11 +1,11 @@
 {% if siteConfig.tags.displayOnPostPage %}
 <div class="post-tags">
 {% if tags|filterExcludedTags %}
-  <p>{{ phrases.tagged_as }}:</p>
+  <p>Tagged as:</p>
   <ul>
   {% for tag in tags|filterExcludedTags %}
     <li>
-      <a title="{{ phrases.articles_tagged_as }} '{{ tag }}'" href="/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag|slugify }}/">{{ tag }}</a>
+      <a title="Articles tagged as '{{ tag }}'" href="/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag|slugify }}/">{{ tag }}</a>
     </li>
   {% endfor %}
   </ul>

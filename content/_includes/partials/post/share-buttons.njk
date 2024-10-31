@@ -4,7 +4,7 @@
 
 {% if shareButtons|length > 0 %}
   <div class="share-buttons">
-    <p>{{ phrases.share_this_article }}:</p>
+    <p>Share this article:</p>
 
     {% if 'mastodon' in shareButtons %}
       {% include "partials/post/mastodon-share-dialog.njk" %}
@@ -15,7 +15,7 @@
 
       {% if shareButton == 'mastodon' %}
       <li>
-        <div data-tooltip="{{ phrases.share_on }} Mastodon - {{ phrases.opens_prompt }}" class="mastodon" tabindex="0">
+        <div data-tooltip="Share on Mastodon - opens prompt window" class="mastodon" tabindex="0">
           {% svgUse "mastodon", "bi" %}
         </div>
       </li>
@@ -23,7 +23,7 @@
 
       {% if shareButton == 'x' %}
       <li>
-        <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} X - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}" class="x">
+        <a target="_blank" rel="noopener noreferrer" data-tooltip="Share on X - opens a new tab" rel="noopener noreferrer" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}" class="x">
           {% svgUse "x", "bi" %}
         </a>
       </li>
@@ -31,7 +31,7 @@
 
       {% if shareButton == 'linkedin' %}
       <li>
-        <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Linkedin - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin">
+        <a target="_blank" rel="noopener noreferrer" data-tooltip="Share on Linkedin - opens a new tab" rel="noopener noreferrer" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin">
           {% svgUse "linkedin", "bi" %}
         </a>
       </li>
@@ -39,7 +39,7 @@
 
       {% if shareButton == 'facebook' %}
       <li>
-        <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Facebook - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook">
+        <a target="_blank" rel="noopener noreferrer" data-tooltip="Share on Facebook - opens a new tab" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook">
           {% svgUse "facebook", "bi" %}
         </a>
       </li>
@@ -47,7 +47,7 @@
 
       {% if shareButton == 'hackernews' %}
       <li>
-        <a target="_blank" rel="noopener noreferrer" data-tooltip="{{ phrases.share_on }} Hacker News - {{ phrases.opens_new_tab }}" rel="noopener noreferrer" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews">
+        <a target="_blank" rel="noopener noreferrer" data-tooltip="Share on Hacker News - opens a new tab" rel="noopener noreferrer" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews">
           {% svgUse "hackernews", "bi" %}
         </a>
       </li>
@@ -55,7 +55,7 @@
 
       {% if shareButton == 'clipboard' %}
       <li>
-        <div class="clipboard" rel="noopener noreferrer" data-tooltip="{{ phrases.copy_to_clipboard }}" tabindex="0">
+        <div class="clipboard" rel="noopener noreferrer" data-tooltip="Copy article URL to clipboard" tabindex="0">
           {% svgUse "clipboard", "bi" %}
         </div>
       </li>

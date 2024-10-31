@@ -22,12 +22,12 @@
 {% set siteTitle = siteConfig.site.title %}
 {%- set pageTitle -%}
   {%- if tag -%}
-    {{ tag.title|capitalizeAllWords }}{% if tag.currentPage >= 2 %} - {{ phrases.page }} {{ tag.currentPage }} {{ phrases.of }} {{ tag.totalPages }}{% endif %} - {{ siteTitle }}
+    {{ tag.title|capitalizeAllWords }}{% if tag.currentPage >= 2 %} - Page {{ tag.currentPage }} of {{ tag.totalPages }}{% endif %} - {{ siteTitle }}
   {%- elif title -%}
     {{ title | safe }} - {{ siteTitle }}
   {%- else -%}
     {%- if pagination.pageNumber > 0 -%}
-      {{ phrases.page }} {{ pagination.pageNumber + 1 }} {{ phrases.of }} {{ pagination.pages|length }} - {{ siteTitle }}
+      Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages|length }} - {{ siteTitle }}
     {%- else -%}
       {{ siteTitle }}
     {%- endif -%}
@@ -36,7 +36,7 @@
 
 {%- set pageDescription -%}
   {%- if tag -%}
-    {{ phrases.view_all_articles_tagged_as }} {{ tag.title|capitalizeAllWords }}
+    Browse and read articles tagged as {{ tag.title|capitalizeAllWords }}
   {%- elif description -%}
     {{ description | truncate(140) }}
   {%- elif (tags or []).indexOf('post') > -1 -%}

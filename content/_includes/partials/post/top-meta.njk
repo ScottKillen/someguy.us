@@ -3,10 +3,10 @@
 <div class="top-meta">
   <time>{{ date|readableDate }}</time>
   {% if siteConfig.showPostLength == 'time' %}
-  <span class="separator">{{ phrases.meta_separator }}</span>
-  <span data-tooltip="{{ wordCount }} {{ phrases.words }}" class="tooltip-bottom reading-time">{{ readingTime }} {{ phrases.min }} {{ phrases.read }}</span>
+  <span class="separator">•</span>
+  <span data-tooltip="{{ wordCount }} words" class="tooltip-bottom reading-time">{{ readingTime }} min read</span>
   {% elif siteConfig.showPostLength == 'count' %}
-  <span class="separator">{{ phrases.meta_separator }}</span>
-  <span class="reading-time">{{ phrases.circa }} {{ wordCount|round }} {{ phrases.words }}</span>   
+  <span class="separator">•</span>
+  <span class="reading-time">ca. {{ wordCount|round }} words</span>
   {% endif %}
 </div>
