@@ -47,7 +47,7 @@ module.exports = {
     // 'ltr' - left to right (like English)
     // 'rtl' - right to left (like Arabic)
     // 'auto - let the user agent decide
-    dir: 'auto',
+    dir: 'ltr',
     // Information about this template.
     // Absolutely optional, but as an author of this template I'll be
     // super happy if you keep it intact :)
