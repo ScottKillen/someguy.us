@@ -1,6 +1,7 @@
 {
-  "name": "eleventy-template-bliss",
-  "version": "2.6.0",
+  "name": "someguy.us",
+  "description": "A personal blog.",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "prebuild": "npm run clean",
