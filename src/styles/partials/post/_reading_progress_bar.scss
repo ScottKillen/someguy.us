@@ -6,8 +6,4 @@
   width: 0;
   height: 4px;
   z-index: 1000;
-
-  @include reducedMotion {
-    display: none;
-  }
 }

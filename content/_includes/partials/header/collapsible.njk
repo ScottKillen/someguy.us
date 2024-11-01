@@ -1,0 +1,16 @@
+{%- set collapseID = "navbarCollapse" -%}
+{%- set navPages = collections.all | eleventyNavigation -%}
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#{{ collapseID }}" aria-controls="{{ collapseID }}" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-md-center" id="{{ collapseID }}">
+  <ul class="navbar-nav">
+  {% for item in navPages %}
+  <li class="nav-item{% if item.url === page.url %} active{% endif %}" {% if item.url === page.url %} aria-current="page"{% endif %}>
+    <a class="nav-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ item.url }}">
+      {{ item.key }}
+    </a>
+  </li>
+  {% endfor %}
+  </ul>
+</div>

@@ -22,17 +22,11 @@
     bottom: 1.5rem;
   }
 
-    svg.bi {
+  svg.bi {
     width: 2rem;
 
     .fillable {
       fill: var(--background-color);
     }
-  }
-}
-
-@include noJS {
-  .scroll-up-arrow {
-    display: none;
   }
 }

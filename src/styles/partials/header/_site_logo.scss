@@ -13,7 +13,6 @@
     text-transform: uppercase;
     font-family: var(--heading-font-family);
     font-optical-sizing: auto;
-    @include transition(opacity);
 
     span {
       font-size: 1.5rem;
@@ -32,23 +31,3 @@
   }
 }
 
-@include belowMenuBreakpoint {
-  .site-logo {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-
-    a {
-      flex-direction: row;
-      width: auto;
-
-      img,
-      svg {
-        height: 3rem;
-      }
-
-      span {
-        display: block;
-      }
-    }
-  }
-}

@@ -14,8 +14,9 @@
     }
   }
 }
+
 .footnotes {
-  font-family: "Source Sans 3", $sansSerifFontFamily;
+  font-family: "Source Sans 3";
   font-optical-sizing: auto;
 
   li,
@@ -27,6 +28,7 @@
     text-underline-offset: 0 !important;
   }
 }
+
 .single-article {
   h1 {
     margin-bottom: 1rem;
@@ -40,21 +42,22 @@
     margin-bottom: 3rem;
 
     img {
-        border-radius: 5px;
-      }
+      border-radius: 5px;
+    }
+
     .credit {
       margin-top: 0;
       margin-bottom: 0;
       font-size: 0.875rem;
-        font-family: var(--arial-font-family);
-        color: var(--top-meta-color);
+      font-family: var(--arial-font-family);
+      color: var(--top-meta-color);
     }
   }
 
   aside:not(.blurb) {
     display: block;
-    font-family: "Source Sans 3", $sansSerifFontFamily;
-      font-optical-sizing: auto;
+    font-family: "Source Sans 3";
+    font-optical-sizing: auto;
     color: var(--aside-color);
     position: absolute;
     width: 15rem;
@@ -68,12 +71,6 @@
     a {
       padding-bottom: 1px;
     }
-
-    @include maxWidth(1024px) {
-      position: static;
-      left: auto;
-      width: auto;
-    }
   }
 }
 
@@ -81,12 +78,5 @@
   .single-article {
     max-width: 43rem;
     position: relative;
-
-    @include maxWidth(1024px) {
-      position: static;
-      margin: 0 auto;
-      left: auto;
-      right: auto;
-    }
   }
 }

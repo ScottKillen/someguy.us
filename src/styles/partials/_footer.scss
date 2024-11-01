@@ -73,14 +73,3 @@
   }
 }
 
-@include aboveFooterBreakpoint {
-  .footer .links {
-    flex-direction: column;
-
-    ul {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-}

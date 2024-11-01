@@ -17,18 +17,15 @@
       display: flex;
       justify-content: center;
       letter-spacing: 0.0125rem;
-      @include transition(color);
 
       svg {
         display: inline-block;
         height: 1.2rem;
         margin-left: 0.3rem;
-        @include transition(fill);
 
         path,
         g {
           fill: var(--link-color);
-          @include transition(fill);
         }
       }
 
@@ -57,26 +54,3 @@
   }
 }
 
-@include belowMenuBreakpoint {
-  .site-links {
-    display: block;
-    width: 100%;
-
-    li {
-      border-bottom: 2px solid var(--mobile-menu-separator-color);
-      padding: 0;
-      margin: 0;
-
-      &:last-child {
-        border: 0;
-      }
-
-      a {
-        display: flex;
-        justify-content: left;
-        margin: 0;
-        width: 100%;
-      }
-    }
-  }
-}

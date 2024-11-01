@@ -9,27 +9,3 @@ footer .container {
   margin-top: 0;
 }
 
-@include aboveMediumBreakpoint {
-  .container {
-    max-width: 32rem;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-@include belowMenuBreakpoint {
-  .container {
-    margin-top: 5rem;
-  }
-}
-
-@include biggerThanMobile {
-  .container {
-    max-width: 43rem;
-
-    &.with-asides,
-    &.with-asides footer .container {
-      max-width: 58rem;
-    }
-  }
-}

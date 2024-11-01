@@ -13,7 +13,6 @@
       svg {
         width: 3rem;
         height: 3rem;
-        @include transition(opacity);
       }
 
       &:hover svg,
@@ -40,11 +39,5 @@
         border-bottom: 2px solid;
       }
     }
-  }
-}
-
-@include darkMode {
-  .feed-list svg {
-    filter: saturate(70%) contrast(90%);
   }
 }

@@ -94,29 +94,6 @@ window.addEventListener('DOMContentLoaded', () => {
   themeSwitcherBtn.addEventListener('click', handleThemeSwitch);
   themeSwitcherBtn.addEventListener('keyup', handleThemeSwitchFromKeyboard);
 
-  // Hamburger menu
-
-  const menuBtnCheckbox = document.querySelector('.menu-btn');
-
-  document.querySelector('.hamburger').addEventListener('keyup', (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-      const { checked } = menuBtnCheckbox;
-      menuBtnCheckbox.checked = !checked;
-    }
-  });
-
-  menuBtnCheckbox.addEventListener('change', () => {
-    document.querySelector('body').classList.toggle('no-scrollbar');
-    const mainContainerStyle = document.getElementById('main').style;
-
-    if (menuBtnCheckbox.checked) {
-      mainContainerStyle.display = 'none';
-    } else {
-      mainContainerStyle.display = 'block';
-    }
-  });
-
   // Reading progress bar
 
   const progressBar = document.querySelector('.reading-progress-bar');

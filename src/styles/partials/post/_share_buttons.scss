@@ -12,16 +12,6 @@
     min-width: 9rem;
   }
 
-  @include mobile {
-    .mastodon[data-tooltip]::after {
-      left: 230%;
-    }
-
-    .x[data-tooltip]::after {
-      left: 80%;
-    }
-  }
-
   ul {
     list-style: none;
     margin: 0;
@@ -51,8 +41,9 @@
       position: relative;
 
       .bi {
-          color: var(--link-color);
-        }
+        color: var(--link-color);
+      }
+
       svg {
         width: 1rem;
         height: 1rem;
@@ -82,18 +73,12 @@
           .fillable {
             fill: var(--background-color);
           }
+
           .fillable-2 {
             fill: var(--link-color);
           }
         }
       }
     }
-  }
-}
-
-@include noJS {
-  .mastodon,
-  .clipboard {
-    display: none;
   }
 }

@@ -138,15 +138,3 @@ textarea {
   padding: 0;
 }
 
-@include mobile {
-  video {
-    width: 100%;
-  }
-}
-
-@include biggerThanMobile {
-  video {
-    width: 50%;
-    max-width: 480px;
-  }
-}

@@ -6,10 +6,6 @@
     display: flex;
     justify-content: space-between;
 
-    @include mobile {
-      flex-direction: column;
-    }
-
     li {
       max-width: 45%;
       display: flex;
@@ -17,19 +13,9 @@
       font-size: 1rem;
       flex: 1;
 
-      @include mobile {
-        max-width: 100%;
-        margin: 0.5rem 0;
-      }
-
       a {
         text-decoration: none;
         height: 100%;
-        @include transition(background);
-
-        @include mobile {
-          padding: 1rem 0;
-        }
 
         .headline {
           display: block;

@@ -5,15 +5,8 @@
   width: 100%;
   max-width: 16rem;
   border: var(--top-meta-color) 0.25rem solid;
-    box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
-    border-radius: 50%;
-    -webkit-shape-outside: circle();
-    shape-outside: circle();
-}
-
-@include mobile {
-  .myphoto {
-    float: none;
-    margin: 2rem auto;
-  }
+  box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+  border-radius: 50%;
+  -webkit-shape-outside: circle();
+  shape-outside: circle();
 }

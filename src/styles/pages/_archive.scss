@@ -18,7 +18,6 @@
     .eleventy-emoji {
       display: inline-block;
       transform: rotate(0deg);
-      @include transition(transform);
     }
 
     &.hidden .eleventy-emoji {
@@ -32,7 +31,6 @@
     opacity: 1;
     padding: 0;
     margin-bottom: 3rem;
-    @include transition(opacity, $longTransitionTime);
 
     &.hidden {
       display: none;
@@ -41,7 +39,7 @@
     }
   }
 
-  & > li {
+  &>li {
     margin: 0;
     list-style: none;
 
@@ -73,28 +71,13 @@
 
         &:hover,
         &:focus {
+
           & svg path,
           & svg g {
             fill: var(--link-hover-color);
           }
         }
       }
-    }
-  }
-}
-
-@include mobile {
-  .archive > li .post {
-    display: block;
-
-    a {
-      display: inline-block;
-      margin-left: 0;
-    }
-
-    time {
-      display: block;
-      text-align: left;
     }
   }
 }
