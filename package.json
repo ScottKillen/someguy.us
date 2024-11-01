@@ -44,6 +44,7 @@
     "eleventy-plugin-emoji": "^1.1.0",
     "eslint": "^9.7.0",
     "html-minifier-terser": "^7.2.0",
+    "jquery": "^3.7.1",
     "jsdom": "^24.0.0",
     "jsonminify": "^0.4.2",
     "lodash": "^4.17.21",

@@ -5,15 +5,27 @@ $primary: #6610f2;
 
 header {
   .active {
+
     .nav-link {
       text-decoration: underline;
     }
   }
 }
 
+:root,
+[data-bs-theme='light'] {
+  .navbar.text-bg-primary {
+    .nav-item {
+      a.nav-link {
+        color: #fff;
 
-
-
+        &:hover {
+          color: rgba(#fff, 0.75);
+        }
+      }
+    }
+  }
+}
 
 
 .site-logo img {

@@ -1,0 +1,9 @@
+<ul class="navbar-nav mx-auto">
+  {% for item in navPages %}
+    <li class="nav-item{% if item.url === page.url %} active{% endif %}" {% if item.url === page.url %} aria-current="page"{% endif %}>
+      <a class="nav-link link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ item.url }}">
+        {{ item.key }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

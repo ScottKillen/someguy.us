@@ -12,6 +12,7 @@ const minifyHTML = require('./_11ty/transforms/minifyHTML');
 const minifyJS = require('./_11ty/transforms/minifyJS');
 const minifyJSON = require('./_11ty/transforms/minifyJSON');
 const minifyXML = require('./_11ty/transforms/minifyXML');
+const passthroughFiles = require('./content/_data/passthroughFiles');
 
 module.exports = function (eleventyConfig) {
   // --- Initial config
@@ -54,6 +55,9 @@ module.exports = function (eleventyConfig) {
   Object.values(plugins).forEach(({ body, options }) => {
     eleventyConfig.addPlugin(body, options && options);
   });
+
+  // - Passthough copy
+  eleventyConfig.addPassthroughCopy(passthroughFiles);
 
   // --- After build events
 
