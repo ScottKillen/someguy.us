@@ -8,7 +8,10 @@ pagination:
 permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---
 
-<div class="post-list h-feed">
+<div class="row">
+<div class="col-4">
+</div>
+<div class="col-8 h-feed container post-list">
   <ul>
   {% for post in posts %}
     <li>
@@ -16,6 +19,7 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
     </li>
   {% endfor %}
   </ul>
+  </div>
 </div>
 
 {% include "partials/scroll-up-arrow.njk" %}
