@@ -1,4 +1,5 @@
 <script>
+  // Navbar scroll effect
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 56) {
@@ -6,6 +7,22 @@
     } else {
       navbar.classList.remove('navbar-scrolled');
     }
+  });
+
+  // Back to top button
+  const toTopButton = document.getElementById('btn-back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      toTopButton.style.display = 'block';
+    } else {
+      toTopButton.style.display = 'none';
+    }
+  });
+  toTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 </script>
 
