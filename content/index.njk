@@ -8,7 +8,7 @@ pagination:
 permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---
 
-<div class="post-list">
+<div class="post-list h-feed">
   <ul>
   {% for post in posts %}
     <li>

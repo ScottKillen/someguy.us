@@ -1,23 +1,23 @@
 {%- set wordCount -%}{{ post.templateContent | striptags | wordcount }}{%- endset -%}
 {%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
 {%- set postDate -%}{{ post.data.date|readableDate }}{%- endset -%}
-<a href="{{ post.url }}">
-  <article>
+<article class="h-entry">
+  <a class="u-url" href="{{ post.url }}">
     <header>
-      <h2 class="post-title">{{ post.data.title }}</h2>
+      <h2 class="post-title p-name">{{ post.data.title }}</h2>
     </header>
-    <div class="excerpt">
+    <div class="excerpt p-summary">
       {% excerpt post %}
     </div>
     <div class="post-meta">
-        <time>{{ postDate }}</time>
-        {% if siteConfig.showPostLength == 'time' %}
+      <time class="dt-published">{{ postDate }}</time>
+      {% if siteConfig.showPostLength == 'time' %}
         <span class="separator">•</span>
         <span class="reading-time" title="{{ wordCount }} words">{{ readingTime }} min read</span>
-        {% elif siteConfig.showPostLength == 'count' %}
+      {% elif siteConfig.showPostLength == 'count' %}
         <span class="separator">•</span>
         <span class="reading-time">ca. {{ wordCount|round }} words</span>
-        {% endif %}
+      {% endif %}
     </div>
-  </article>
-</a>
+  </a>
+</article>
