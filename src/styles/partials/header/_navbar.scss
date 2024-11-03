@@ -1,0 +1,26 @@
+header {
+  .active {
+
+    .nav-link {
+      text-decoration: underline;
+    }
+  }
+}
+
+.navbar {
+  transition: all 0.5s;
+}
+
+.navbar-scrolled {
+  background: rgba(var(--bs-body-bg-rbg), 0.8);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rbga(var(--bs-body-color-rgb), 0.5);
+}
+
+@supports (--webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .navbar-scrolled {
+    -webkite-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(var(--bs-body-bg-rbg), 0.8);
+  }
+}

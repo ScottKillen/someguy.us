@@ -1,0 +1,44 @@
+$black: #100f0f;
+$gray-950: #1c1b1a;
+$gray-900: #282726;
+$gray-850: #343231;
+$gray-800: #403e3c;
+$gray-700: #575653;
+$gray-600: #6f6e69;
+$gray-500: #878580;
+$gray-400: #9f9d96;
+$gray-300: #b7b5ac;
+$gray-200: #cecdc3;
+$gray-150: #dad8ce;
+$gray-100: #e6e4d9;
+$gray-50: #f3f0e5;
+$white: #fffcf0;
+
+$red-400: #d14d41;
+$red: #C03e35;
+$red-600: #af3029;
+$orange-400: #da702c;
+$orange: #cb6120;
+$orange-600: #bc5215;
+$yellow-400: #d0a215;
+$yellow: #b3920b;
+$yellow-600: #ad8301;
+$green-400: #879a39;
+$green: #768d22;
+$green-600: #66800b;
+$cyan-400: #3aa99f;
+$cyan: #2f968d;
+$cyan-600: #24837b;
+$blue-400: #4385be;
+$blue: #3171b2;
+$blue-600: #205ea6;
+$purple-400: #8b7ec8;
+$purple: #745fb2;
+$purple-600: #5e409d;
+$pink-400: #ce5d97;
+$pink: #b78a83;
+$pink-600: #a02f6f;
+
+$primary: $purple;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
