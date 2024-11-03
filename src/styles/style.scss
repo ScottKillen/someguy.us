@@ -1,6 +1,8 @@
 $primary: #6610f2;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'partials';
+@import 'partials/skip_link';
+@import 'partials/pagination';
+
 @import 'pages';
 
 header {
