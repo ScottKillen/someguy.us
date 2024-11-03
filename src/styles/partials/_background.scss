@@ -3,8 +3,6 @@ $backgrounds: ('light': "<svg xmlns='http://www.w3.org/2000/svg' width='100' hei
 );
 
 $data-svg-prefix: 'data:image/svg+xml;utf-8,';
-$bg-img-color: #3171b2;
-$bg-gradient-angle: 157.5deg;
 
 @function str-replace($string, $search, $replace) {
 
@@ -39,17 +37,19 @@ $bg-gradient-angle: 157.5deg;
   @return null;
 }
 
+$bg-gradient-angle: 157.5deg;
+$bg-fade-out-at-percent: 70%;
 
 :root,
 [data-bs-theme='light'] {
   body {
-    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) 80%), get-background('light', $blue-300);
-    ;
+    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) $bg-fade-out-at-percent), get-background('light', $blue-300);
+    min-height: 100vh;
   }
 }
 
 [data-bs-theme='dark'] {
   body {
-    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) 80%), get-background('dark', $blue-700);
+    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) $bg-fade-out-at-percent), get-background('dark', $blue-700);
   }
 }
