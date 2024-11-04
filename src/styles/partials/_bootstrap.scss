@@ -20,15 +20,19 @@ $red-600: #af3029;
 $orange-400: #da702c;
 $orange: #cb6120;
 $orange-600: #bc5215;
+$yellow-100: #fceeb8;
 $yellow-400: #d0a215;
 $yellow: #b3920b;
 $yellow-600: #ad8301;
+$yellow-900: #4d3a0b;
 $green-400: #879a39;
 $green: #768d22;
 $green-600: #66800b;
+$cyan-50: #ebf2e7;
 $cyan-400: #3aa99f;
 $cyan: #2f968d;
 $cyan-600: #24837b;
+$cyan-950: #142625;
 $blue-400: #4385be;
 $blue: #3171b2;
 $blue-600: #205ea6;
@@ -42,3 +46,28 @@ $pink-600: #a02f6f;
 $primary: $purple;
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+:root,
+[data-bs-theme='light'] {
+  .btn-info {
+    --bs-btn-bg: #24837b;
+    --bs-btn-border-color: var(--bs-btn-bg);
+    --bs-btn-disabled-bg: var(--bs-btn-bg);
+    --bs-btn-disabled-border-color: var(--bs-btn-bg);
+    --bs-btn-hover-bg: #3aa99f;
+    --bs-btn-hover-border-color: #509b92;
+    --bs-btn-active-border-color: #5ba198;
+    --bs-btn-color: #ffffc0
+  }
+}
+
+[data-bs-theme='dark'] {
+  .btn-info {
+    --bs-btn-bg: #3aa99f;
+    --bs-btn-hover-bg: #24837b;
+    --bs-btn-hover-border-color: #369a91;
+    --bs-btn-active-border-color: #369a91;
+    --bs-btn-color: #100f0f;
+    --bs-btn-hover-color: #ffffc0;
+  }
+}
