@@ -57,7 +57,11 @@ $primary: $purple;
     --bs-btn-hover-bg: #3aa99f;
     --bs-btn-hover-border-color: #509b92;
     --bs-btn-active-border-color: #5ba198;
-    --bs-btn-color: #ffffc0
+    --bs-btn-color: #ffffc0;
+  }
+
+  .page-link {
+    --bs-pagination-active-bg: #5e409d;
   }
 }
 
@@ -69,5 +73,13 @@ $primary: $purple;
     --bs-btn-active-border-color: #369a91;
     --bs-btn-color: #100f0f;
     --bs-btn-hover-color: #ffffc0;
+    --bs-body-color: #cecdc3;
+    --bs-body-color-rgb: 206, 205, 195;
+    --bs-secondary: #656e69;
+    --bs-secondary-rgb: 111, 110, 105;
+  }
+
+  .page-link {
+    --bs-pagination-active-bg: #8b7ec8;
   }
 }

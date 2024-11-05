@@ -9,17 +9,21 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
 ---
 
 <div class="row">
-<div class="col-4">
-</div>
-<div class="col-8 h-feed container post-list">
-  <ul>
-  {% for post in posts %}
-    <li>
-      {% include "partials/single-post-excerpt.njk" %}
-    </li>
-  {% endfor %}
-  </ul>
+  <div class="col-4"></div>
+  <div class="col-8 h-feed container post-list">
+    <ul>
+      {% for post in posts %}
+        <li>
+          {% include "partials/single-post-excerpt.njk" %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
+</div>
+<div class="row mb-2">
+  <div class="col-3"></div>
+  <div class="col-6 border-bottom border-secondary"></div>
+  <div class="col-3"></div>
 </div>
 
 {% include "partials/scroll-up-arrow.njk" %}
@@ -27,6 +31,8 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
 {%- set totalPages = pagination.pages|length -%}
 {%- set currentPage = pagination.pageNumber + 1 -%}
 {%- set previousHref = pagination.href.previous -%}
+{%- set firstHref = pagination.href.first -%}
 {%- set nextHref = pagination.href.next -%}
+{%- set lastHref = pagination.href.last -%}
 
 {% include "partials/pagination.njk" %}

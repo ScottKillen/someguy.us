@@ -1,41 +1,60 @@
 {% if totalPages > 1 %}
-  <nav class="pagination">
-    <ul>
-      <li class="links previous">
-        {% if previousHref %}
-          <a href="{{ previousHref }}">
-            <span class="arrow">←</span>Newer <span class="articles">articles</span>
+  <nav aria-label="Page navigation">
+    <ul class="pagination pagination-sm justify-content-center">
+      {%- if currentPage > 2 -%}
+        <li class="page-item">
+          <a class="page-link" href="{{ firstHref }}">
+            {% svgUse "left-to-line", "bi" %}
+            <span class="sr-only" hidden>Newest articles</span>
           </a>
-        {% else %}
-          <span class="inactive-link">
-            <span class="arrow">←</span>Newer <span class="articles">articles</span>
-          </span>
-        {% endif %}
+        </li>
+      {%- else -%}
+        <li class="page-item disabled">
+          <span class="page-link">{% svgUse "left-to-line", "bi" %}</span>
+        </li>
+      {%- endif -%}
+      {%- if currentPage > 1 -%}
+        <li class="page-item">
+          <a class="page-link" href="{{ previousHref }}">
+            {% svgUse "left", "bi" %}
+            <span class="sr-only" hidden>Newer articles</span>
+          </a>
+        </li>
+      {%- else -%}
+        <li class="page-item disabled">
+          <span class="page-link">{% svgUse "left", "bi" %}</span>
+        </li>
+      {%- endif -%}
+
+      <li class="page-item active">
+        <span class="page-link">Page {{ currentPage }} of {{ totalPages }}</span>
       </li>
-      {% if currentPage %}
-      <li class="current">
-        <form class="jump-to-page-form">
-          <label for="jump-to-page" class="page input-label">Go to page:</label>
-          <div class="fields">
-            <input id="jump-to-page" class="page-number-input" title="Enter a page number to quickly jump to it" type="number" enterkeyhint="go" inputmode="numeric" min="1" max="{{ totalPages }}" value="{{ currentPage }}">
-            <span class="of">of </span>
-            <span class="total-pages">{{ totalPages }}</span>
-            <input type="submit" class="jump-button" disabled value="Go!">
-          </div>
-        </form>
-      </li>
-      {% endif %}
-      <li class="links next">
-      {% if nextHref %}
-        <a href="{{ nextHref }}">
-          Older <span class="articles">articles</span> <span class="arrow">→</span>
-        </a>
+
+      {%- if currentPage < totalPages -%}
+        <li class="page-item">
+          <a class="page-link" href="{{ nextHref }}">
+            <span class="sr-only" hidden>Older articles</span>
+            {% svgUse "right", "bi" %}
+          </a>
+        </li>
+      {%- else -%}
+        <li class="page-item disabled">
+          <span class="page-link">{% svgUse "right", "bi" %}</span>
+        </li>
+      {%- endif -%}
+
+      {%- if currentPage < totalPages - 1 -%}
+        <li class="page-item">
+          <a class="page-link" href="{{ lastHref }}">
+            <span class="sr-only" hidden>Oldest articles</span>
+            {% svgUse "right-to-line", "bi" %}
+          </a>
+        </li>
       {% else %}
-        <span class="inactive-link">
-          Older <span class="articles">articles</span> <span class="arrow">→</span>
-        </span>
+        <li class="page-item disabled">
+          <span class="page-link">{% svgUse "right-to-line", "bi" %}</span>
+        </li>
       {% endif %}
-    </li>
-  </ul>
-</nav>
+    </ul>
+  </nav>
 {% endif %}
