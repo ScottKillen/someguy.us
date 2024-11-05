@@ -1,0 +1,6 @@
+<script>
+  const selectedTheme = localStorage.getItem('theme') || null;
+  if (selectedTheme) {
+    document.documentElement.setAttribute('data-bs-theme', selectedTheme);
+  }
+</script>
