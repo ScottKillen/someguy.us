@@ -18,12 +18,33 @@
   .h2,
   h3,
   .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
   nav,
   .read-more,
   .post-meta {
     font-family: "Libre Franklin", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    text-wrap: balance;
   }
 
   em {
