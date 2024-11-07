@@ -8,6 +8,45 @@
   text-shadow: 2px 2px 4px rgba($black, 0.4);
 }
 
+:root {
+  --bs-body-font-family: "Libre Baskerville", serif;
+  --bs-font-monospace: "Fira Code", monospace;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  nav,
+  .read-more,
+  .post-meta {
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  pre,
+  code,
+  kbd,
+  samp,
+  .font-monospace {
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
+
+
+
+
 
 
 
