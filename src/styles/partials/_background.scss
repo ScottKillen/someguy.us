@@ -37,19 +37,17 @@ $data-svg-prefix: 'data:image/svg+xml;utf-8,';
   @return null;
 }
 
-$bg-gradient-angle: 157.5deg;
-$bg-fade-out-at-percent: 70%;
-
 :root,
 [data-bs-theme='light'] {
   body {
-    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) $bg-fade-out-at-percent), get-background('light', $blue-300);
+
+    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%), linear-gradient(90deg, transparent, var(--bs-body-bg) 90%), get-background('light', $blue-300), url("/images/lightbg.png");
     min-height: 100vh;
   }
 }
 
 [data-bs-theme='dark'] {
   body {
-    background-image: linear-gradient($bg-gradient-angle, transparent, var(--bs-body-bg) $bg-fade-out-at-percent), get-background('dark', $blue-700);
+    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%), linear-gradient(90deg, transparent, var(--bs-body-bg) 90%), get-background('light', $blue-700), url("/images/darkbg.png");
   }
 }
