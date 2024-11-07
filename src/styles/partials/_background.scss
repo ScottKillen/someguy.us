@@ -41,7 +41,11 @@ $data-svg-prefix: 'data:image/svg+xml;utf-8,';
 [data-bs-theme='light'] {
   body {
 
-    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%), linear-gradient(90deg, transparent, var(--bs-body-bg) 90%), get-background('light', $blue-300), url("/images/lightbg.png");
+    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%),
+      linear-gradient(90deg, transparent, var(--bs-body-bg) 90%),
+      get-background('light', $blue-300),
+      url("/images/lightbg.png");
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
     min-height: 100vh;
   }
 }
