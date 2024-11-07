@@ -1,16 +1,17 @@
 @import 'partials';
 
-
-
-
-
-
-
-.site-logo img {
-  border-radius: 50%;
-  border: 2px solid var(--text-color);
-  box-shadow: 3px 4px 7px 0px rgba($black, 0.4)
+.site-logo {
+  filter: drop-shadow(3px 4px 7px rgba($black, 0.4));
 }
+
+.navbar-brand {
+  text-shadow: 2px 2px 4px rgba($black, 0.4);
+}
+
+
+
+
+
 
 .bi {
   width: 1em;
