@@ -1,7 +1,9 @@
 {% if siteConfig.metaPages %}
-<ul>
-{% for item in siteConfig.metaPages %}
-  <li><a href="{{ item.url }}"><span>{% svgUse item.icon, "bi" %} {{ item.title }}</span></a></li>
-{% endfor %}
-</ul>
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    {% for item in siteConfig.metaPages %}
+      <li class="ms-3">
+        <a rel="me" class="text-body-secondary" href="{{ item.url }}" title="{{ item.title }}"><span>{% svgUse item.icon, "bi" %}</span></a>
+        </li>
+    {% endfor %}
+  </ul>
 {% endif %}
