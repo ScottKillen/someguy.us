@@ -47,8 +47,24 @@
   .h6 {
     text-wrap: balance;
   }
-}
 
+  h1,
+  .h1,
+  .post-list h2 {
+    font-weight: 700;
+  }
+
+  h2,
+  .h2 {
+    font-weight: 600;
+  }
+
+  h6,
+  .h6 {
+    font-weight: var(--bs-body-font-weight);
+    font-variant: small-caps;
+  }
+}
 
 
 
