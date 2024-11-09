@@ -65,33 +65,15 @@
     font-variant: small-caps;
   }
 
-  .tag-cloud {
-    .btn {
-      opacity: 50%;
-      transition: 0.15s;
-
-      &:hover {
-        opacity: 75%;
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
-.bi {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  fill: currentColor;
-}
-
-.scroll-up-arrow {
   .bi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+  }
+
+  .scroll-up-arrow {
+    .bi {
       width: 2rem;
       height: 2rem;
       fill: var(--background-color);
