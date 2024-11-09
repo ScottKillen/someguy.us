@@ -157,7 +157,7 @@ module.exports = {
     displayOnPostPage: true,
     // URL prefix for tag pages. If you set 'tag' as your tag prefix,
     // your tag pages will look like this: https://yoursite.org/tag/foo
-    pageUrlPrefix: 'tag',
+    pageUrlPrefix: 'tags',
     // How many posts should be visible on tag pages until pagination is used?
     postsPerPage: 10,
   },
