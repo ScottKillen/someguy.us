@@ -9,7 +9,9 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
 ---
 
 <div class="row">
-  <div class="col-4"></div>
+  <div class="col-4">
+    {% include "partials/tag-cloud.njk" %}
+  </div>
   <div class="col-8 h-feed container post-list">
     <ul>
       {% for post in posts %}

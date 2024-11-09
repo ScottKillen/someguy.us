@@ -64,8 +64,18 @@
     font-weight: var(--bs-body-font-weight);
     font-variant: small-caps;
   }
-}
 
+  .tag-cloud {
+    .btn {
+      opacity: 50%;
+      transition: 0.15s;
+
+      &:hover {
+        opacity: 75%;
+      }
+    }
+  }
+}
 
 
 
