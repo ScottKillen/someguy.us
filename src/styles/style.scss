@@ -79,4 +79,16 @@
       fill: var(--background-color);
     }
   }
+
+  body {
+    padding-top: 140px;
+  }
+
+  main>.row {
+    .col-left {
+      .sticky-top {
+        top: 140px;
+      }
+    }
+  }
 }
