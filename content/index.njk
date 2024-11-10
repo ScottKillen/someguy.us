@@ -28,11 +28,6 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
     </ul>
   </div>
 </div>
-<div class="row mb-2">
-  <div class="col-3"></div>
-  <div class="col-6 border-bottom border-secondary"></div>
-  <div class="col-3"></div>
-</div>
 
 {% include "partials/scroll-up-arrow.njk" %}
 
@@ -43,4 +38,8 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
 {%- set nextHref = pagination.href.next -%}
 {%- set lastHref = pagination.href.last -%}
 
+{%- set paginationComponent %}
 {% include "partials/pagination.njk" %}
+{%- endset -%}
+
+{% include "partials/footer.njk" %}
