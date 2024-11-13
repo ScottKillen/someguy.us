@@ -61,6 +61,15 @@ module.exports = function (eleventyConfig) {
     return `<svg ${attributes}><use href="#${name}-icon"></use></svg>`;
   });
 
+  eleventyConfig.addShortcode('img', function img(url, kwargs) {
+    // eslint-disable-next-line no-unused-vars
+    const { __keywords, ...attrs } = kwargs ?? {};
+    const attributes = Object.entries(attrs)
+      .map(([name, value]) => `${name}="${value}"`)
+      .join(' ');
+    return `<img src="${url}" ${attributes} />`;
+  });
+
   // --- Plugins
 
   Object.values(plugins).forEach(({ body, options }) => {

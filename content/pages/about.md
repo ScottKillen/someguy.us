@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 1
 ---
 
-{% img "/images/scottkillen.jpg", "myphoto" %}
+{% img '/images/scottkillen.jpg', 'class'='myphoto' %}
 
 *[CPA]: Certified Public Accountant
 Welcome to my personal blog!  I'm {{ siteConfig.author.name }}, and I'm thrilled to have yoou here. I wear many wear manyu hats: I'm a former software engineer, a CPA, and a passionate gospel preacher.
