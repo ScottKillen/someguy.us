@@ -50,6 +50,17 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(name, body);
   });
 
+  eleventyConfig.addShortcode('icon', function icon(name, kwargs) {
+    this.ctx.page.icons ||= new Set();
+    this.ctx.page.icons.add(name);
+    // eslint-disable-next-line no-unused-vars
+    const { __keywords, ...attrs } = kwargs ?? {};
+    const attributes = Object.entries(attrs)
+      .map(([name, value]) => `${name}="${value}"`)
+      .join(' ');
+    return `<svg ${attributes}><use href="#${name}-icon"></use></svg>`;
+  });
+
   // --- Plugins
 
   Object.values(plugins).forEach(({ body, options }) => {

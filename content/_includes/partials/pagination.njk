@@ -4,25 +4,27 @@
       {%- if currentPage > 2 -%}
         <li class="page-item">
           <a class="page-link" href="{{ firstHref }}">
-            {% svgUse "left-to-line", "bi" %}
+            {% icon 'left-to-line', 'class'='bi' %}
             <span class="sr-only" hidden>Newest articles</span>
           </a>
         </li>
       {%- else -%}
         <li class="page-item disabled">
-          <span class="page-link">{% svgUse "left-to-line", "bi" %}</span>
+          <span class="page-link">{% icon 'left-to-line', 'class'='bi' %}</span>
         </li>
       {%- endif -%}
       {%- if currentPage > 1 -%}
         <li class="page-item">
           <a class="page-link" href="{{ previousHref }}">
-            {% svgUse "left", "bi" %}
+            {% icon 'left',
+            'class' = 'bi' %}
             <span class="sr-only" hidden>Newer articles</span>
           </a>
         </li>
       {%- else -%}
         <li class="page-item disabled">
-          <span class="page-link">{% svgUse "left", "bi" %}</span>
+          <span class="page-link">{% icon 'left',
+            'class' = 'bi' %}</span>
         </li>
       {%- endif -%}
 
@@ -34,12 +36,14 @@
         <li class="page-item">
           <a class="page-link" href="{{ nextHref }}">
             <span class="sr-only" hidden>Older articles</span>
-            {% svgUse "right", "bi" %}
+            {% icon 'right',
+            'class' = 'bi' %}
           </a>
         </li>
       {%- else -%}
         <li class="page-item disabled">
-          <span class="page-link">{% svgUse "right", "bi" %}</span>
+          <span class="page-link">{% icon 'right',
+            'class' = 'bi' %}</span>
         </li>
       {%- endif -%}
 
@@ -47,12 +51,12 @@
         <li class="page-item">
           <a class="page-link" href="{{ lastHref }}">
             <span class="sr-only" hidden>Oldest articles</span>
-            {% svgUse "right-to-line", "bi" %}
+            {% icon 'right-to-line', 'class'='bi' %}
           </a>
         </li>
       {% else %}
         <li class="page-item disabled">
-          <span class="page-link">{% svgUse "right-to-line", "bi" %}</span>
+          <span class="page-link">{% icon 'right-to-line', 'class'='bi' %}</span>
         </li>
       {% endif %}
     </ul>

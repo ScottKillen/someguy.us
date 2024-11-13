@@ -27,8 +27,7 @@
     "watch:sass": "sass --no-source-map --watch ./src/styles:_site/css --style compressed",
     "build:sass": "sass --no-source-map src/styles:_site/css --style compressed",
     "sort-package-json": "sort-package-json",
-    "start": "npm run dev",
-    "svg": "svg-symbol-sprite -i ./src/icons -o ./content/_includes/svg-sprite.svg"
+    "start": "npm run dev"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

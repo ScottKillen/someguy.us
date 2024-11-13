@@ -7,7 +7,7 @@
     class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     {% include "partials/no-flash.njk" %}
     {% include "partials/header/skip-link.njk" %}
-    {% include "svg-sprite.svg" %}
+    {% include "partials/icon-sprite-sheet.njk" %}
     {% include "partials/header.njk" %}
     <main id="content" class="container">
       {{ content|safe }}
