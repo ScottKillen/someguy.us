@@ -1,5 +1,6 @@
 ---
-title: About Me
+title: About this blog
+layout: about
 description: About Scott Killen
 customPermalink: /about/
 eleventyNavigation:
@@ -7,20 +8,18 @@ eleventyNavigation:
   order: 1
 ---
 
-{% img '/images/scottkillen.jpg', 'class'='myphoto' %}
-
 *[CPA]: Certified Public Accountant
-Welcome to my personal blog!  I'm {{ siteConfig.author.name }}, and I'm thrilled to have yoou here. I wear many wear manyu hats: I'm a former software engineer, a CPA, and a passionate gospel preacher.
 
-I love spending time with my wife and have many hobbies. I am never bored.
+## An art project
 
-## My Calling
+I have been fascinated by websites since the mid-nineties. Back then we had to code them by hand, and there was no such thing as  [CSS](https://www.w3.org/Style/CSS/Overview.en.html). My first website was rudimentary by today's standards  As time has gone by, I have witnessed several advancements. (I remember sitting across the hall from the lab at [Turner Broadcasting](https://www.tbs.com/) when the technician figured how to push short videos to web browsers frame by frame.) Today web sites can do amazing things and I enjoy exploring the aesthetic side of things.
 
-The Bible says, "But seek first the kingdom of God and his righteousness...,"[^1] and to that end, I enjoy studying the Bible. Learning about Jesus and sharing His teaching brings me grat joy. I find it incredibly rewarding to help others navigate their spiritual journeys and grow in faith. Preaching at a small church in Edisto Island, South Carolina has been a fulfilling endeavor that allows me to fulfill the calling of sharing God's Word with others[^2].
+## A work in progress
 
-[^1]: [Matthew 6:33](https://www.esv.org/verses/Matthew%206%3A33/)
-[^2]: [Matthew 28:19–20](https://www.esv.org/verses/Matthew%2028%3A19-20/)
+In my current career, my second, I am a CPA, but I began designing software in my teens after seeing the movie *War Games*. Even now, I still spend my leisure time tinkering with software.
 
-## What You'll Find Here
+This blog is generated using [Eleventy](https://www.11ty.dev/), a static site generator. The fun part about Eleventy (for me) is that it is written in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), running on [node.js](https://nodejs.org/) and supporting [many template languages](https://www.11ty.dev/docs/languages/). I enjoy having many tools at my disposal to use to make whatever improvements I decide on. This is the project that I tweak to get it just how I like it.
 
-This blog is a medium for my expression of *my opinion* on whatever happens to be on my mind. If what you read here resonates and is useful to you, wonderful! If not, its OK. Remember, I am just Som Guy™.
+## A place to write
+
+Over the years, I have occasionally had things on my mind that I wanted to express. This site is a place where I can express my thoughts. What resides here are my thoughts, and my opinions, and mine alone. Hopefully, what I have put here is valuable to you.
