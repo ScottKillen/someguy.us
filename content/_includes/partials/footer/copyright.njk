@@ -1,2 +1,2 @@
 {%- set author = siteConfig.author -%}
-<span class="mb-3 mb-md-0 text-body-secondary">&copy; 2018–{% currentYear %} {{ author.name|safe }}</span>
+<span class="mb-3 mb-md-0 text-body-secondary">{% icon 'copyright', 'class'='bi', 'alt'='Copyright', 'aria-hidden'='true' %}<span class=sr-only>Copyright</span> 2018–{% currentYear %} {{ author.name|safe }}</span>
