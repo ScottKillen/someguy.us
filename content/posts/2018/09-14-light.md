@@ -4,11 +4,11 @@ description: A poem about the Light.
 excerpt: A poem about the Light.
 date: 2018-09-14
 tags:
-  - poetry
   - Jesus
   - light
   - veneration
 poem: true
+type: poetry
 image:
   src: /images/light.jpg
   alt: A river glows at sunset

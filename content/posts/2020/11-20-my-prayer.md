@@ -4,10 +4,10 @@ description: A poem about humility.
 excerpt: A poem about humility.
 date: 2020-11-20
 tags:
-  - poetry
   - prayer
   - supplication
 poem: true
+type: poetry
 image:
   src: /images/my-prayer.jpg
   alt: A man praying in silouhette.
