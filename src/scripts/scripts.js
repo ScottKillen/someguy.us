@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setProgress();
   }
 
-  // Expand / collapse post archives
+  // TODO: Expand / collapse post archives
 
   const yearHeadingSelector = '.year-heading';
   const postLists = document.querySelectorAll('.archive .list');
@@ -139,99 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     archiveYearHeadings[0].classList.remove('hidden');
   }
 
-  // Pagination - page number numerical input + jump button
-
-  const pageNumberForm = document.querySelector('.jump-to-page-form');
-  const pageNumberInput = document.querySelector('.page-number-input');
-  const jumpButton = document.querySelector('.jump-button');
-
-  const enableJumpButton = () => {
-    jumpButton.removeAttribute('disabled');
-  };
-
-  const disableJumpButton = () => {
-    jumpButton.setAttribute('disabled', '');
-  };
-
-  const handleRedirect = (pageNumber) => {
-    const pageUrl = window.location.href
-      .split(/\/[0-9]+\//)[0]
-      .replace(/\/+$/, '');
-
-    const newLocation =
-      pageNumber === 1 ? pageUrl : `${pageUrl}/${pageNumber}/`;
-
-    window.location.href = newLocation;
-  };
-
-  if (pageNumberForm) {
-    let cachedPageNumber;
-    const currentPageNumber = parseInt(pageNumberInput.value);
-
-    const totalPages = parseInt(
-      document.querySelector('.total-pages').innerHTML,
-    );
-
-    const isPageNumberAllowed = (pageNumber) => {
-      const pageNumberInteger = parseInt(pageNumber) || pageNumber;
-
-      return (
-        pageNumberInteger > 0 &&
-        pageNumberInteger <= totalPages &&
-        pageNumberInteger.toString().length <= totalPages.toString().length
-      );
-    };
-    const isPageNumberDifferent = (pageNumber) => {
-      const pageNumberInteger = parseInt(pageNumber) || pageNumber;
-      return pageNumberInteger !== currentPageNumber;
-    };
-
-    const handlePageChange = () => {
-      const newPageNumber = parseInt(pageNumberInput.value);
-      const canRedirect = isPageNumberAllowed(newPageNumber);
-
-      if (canRedirect) {
-        handleRedirect(newPageNumber);
-      }
-    };
-
-    pageNumberInput.addEventListener('focus', (event) => {
-      cachedPageNumber = parseInt(event.currentTarget.value);
-      pageNumberInput.value = '';
-    });
-
-    pageNumberInput.addEventListener('blur', () => {
-      if (!pageNumberInput.value) {
-        pageNumberInput.value = cachedPageNumber;
-      }
-    });
-
-    pageNumberInput.addEventListener('input', (event) => {
-      const typedValue = event.currentTarget.value;
-
-      const legitPageNumber = isPageNumberAllowed(typedValue);
-      const differentPageNumber = isPageNumberDifferent(typedValue);
-
-      if (legitPageNumber && differentPageNumber) {
-        enableJumpButton();
-      } else {
-        disableJumpButton();
-
-        if (differentPageNumber) {
-          const truncatedPageNumber = typedValue.slice(0, -1);
-          pageNumberInput.value = truncatedPageNumber;
-          if (truncatedPageNumber) enableJumpButton();
-        }
-      }
-    });
-
-    pageNumberForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      handlePageChange();
-    });
-  }
-
-  // Mastodon share button
+  // TODO: Mastodon share button
 
   const mastodonShareForm = htmlElement.querySelector(
     '.share-buttons .mastodon-share-form',
