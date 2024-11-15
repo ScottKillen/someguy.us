@@ -36,6 +36,7 @@
   .read-more,
   .post-meta,
   .author-info,
+  .tag-cloud,
   footer {
     font-family: "Source Sans 3", sans-serif;
   }
@@ -123,5 +124,13 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+  }
+
+  .tag-cloud {
+    a.btn-primary {
+      &:hover {
+        background: #6c757d;
+      }
+    }
   }
 }
