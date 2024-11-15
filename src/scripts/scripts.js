@@ -99,46 +99,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setProgress();
   }
 
-  // TODO: Expand / collapse post archives
-
-  const yearHeadingSelector = '.year-heading';
-  const postLists = document.querySelectorAll('.archive .list');
-
-  const archiveYearHeadings = document.querySelectorAll(
-    `.archive ${yearHeadingSelector}`,
-  );
-
-  const handleArchiveToggle = (e) => {
-    const clickedHeading = e.target.closest(yearHeadingSelector);
-    const year = clickedHeading.getAttribute('id').split('-')[1];
-    clickedHeading.classList.toggle('hidden');
-    document
-      .getElementsByClassName(`posts-${year}`)[0]
-      .classList.toggle('hidden');
-  };
-
-  const handleArchiveToggleFromKeyboard = (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-      handleArchiveToggle(e);
-    }
-  };
-
-  if (postLists && postLists.length > 0) {
-    for (const listItem of postLists) {
-      listItem.classList.add('hidden');
-    }
-
-    for (const heading of archiveYearHeadings) {
-      heading.classList.add('clickable', 'hidden');
-      heading.addEventListener('click', handleArchiveToggle);
-      heading.addEventListener('keyup', handleArchiveToggleFromKeyboard);
-    }
-
-    postLists[0].classList.remove('hidden');
-    archiveYearHeadings[0].classList.remove('hidden');
-  }
-
   // TODO: Mastodon share button
 
   const mastodonShareForm = htmlElement.querySelector(
