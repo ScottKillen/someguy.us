@@ -1,7 +1,4 @@
 const slugifyString = require('./slugifyString');
-const siteConfig = require('../../content/_data/siteConfig');
-
-const { language, options } = siteConfig.localeSort;
 
 /**
  * Returns array of unique key values for passed collection
@@ -15,7 +12,7 @@ const uniqueKeyValues = (collection, key) => {
   let collectionKeyValues = collection
     .filter((item) => key in item.data)
     .flatMap((item) => item.data[key])
-    .sort((a, b) => a.localeCompare(b, language, options));
+    .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
   // dedupe
   let uniqueValues = [...new Set(collectionKeyValues)];
@@ -24,7 +21,7 @@ const uniqueKeyValues = (collection, key) => {
   let valuesObjects = uniqueValues.map((value) => {
     let postsWithValue = collection.filter((item) =>
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-      item.data[key]?.includes(value)
+      item.data[key]?.includes(value),
     );
 
     return {
