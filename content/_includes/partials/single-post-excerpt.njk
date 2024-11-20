@@ -6,7 +6,7 @@
     <h2 class="display-5 mb-1 p-name post-title link-offset-1">
       {{ post.data.title }}
     </h2>
-    <p class="post-meta text-body-secondary mb-2">
+    <p class="post-meta text-body-secondary mb-2 text-font-sans">
       <time class="dt-published">{{ postDate }}</time>
       <span class="separator">•</span>
       <span class="reading-time" title="{{ wordCount }} words">{{ readingTime }} minutes</span>
@@ -14,6 +14,6 @@
     <div class="excerpt p-summary text-body">
       {% excerpt post %}
     </div>
-    <p class="read-more">Read more</p>
+    <p class="read-more text-font-sans">Read more</p>
   </a>
 </article>
