@@ -1,6 +1,11 @@
-<footer class="footer">
-  <div class="container">
-    {% include "partials/footer/links.njk" %}
+<footer class="footer d-flex flex-wrap justify-content-between aliagn-items-center py-3 my-4 border-top text-font-sans">
+  <div class="col-md-4 d-flex align-items-center">
     {% include "partials/footer/copyright.njk" %}
   </div>
+  {%- if paginationComponent -%}
+  <div class="col-md-4 d-flex align-items-center justify-content-center">
+    {{ paginationComponent | safe }}
+  </div>
+  {%- endif -%}
+  {% include "partials/footer/meta-pages.njk" %}
 </footer>

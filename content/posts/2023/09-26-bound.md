@@ -4,12 +4,12 @@ description: A poem about slavery, sin, and redemption.
 excerpt: A poem about slavery, sin, and redemption.
 date: 2023-09-26
 tags:
-  - poetry
   - Jesus
   - slavery
   - sin
   - redemption
 poem: true
+type: poetry
 disclaimer:
   text: This poem was previously published at Medium on July 31, 2019.
   url: https://medium.com/@killen.scott/bound-7d330e51c5b0

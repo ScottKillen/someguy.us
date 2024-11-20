@@ -17,16 +17,6 @@ const setTheme = (theme) => {
   }
 };
 
-const scrollToTop = () => {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: window.matchMedia('(prefers-reduced-motion)').matches
-      ? 'auto'
-      : 'smooth',
-  });
-};
-
 const getScrollPercent = () => {
   const htmlElement = document.documentElement;
   const body = document.body;
@@ -94,29 +84,6 @@ window.addEventListener('DOMContentLoaded', () => {
   themeSwitcherBtn.addEventListener('click', handleThemeSwitch);
   themeSwitcherBtn.addEventListener('keyup', handleThemeSwitchFromKeyboard);
 
-  // Hamburger menu
-
-  const menuBtnCheckbox = document.querySelector('.menu-btn');
-
-  document.querySelector('.hamburger').addEventListener('keyup', (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-      const { checked } = menuBtnCheckbox;
-      menuBtnCheckbox.checked = !checked;
-    }
-  });
-
-  menuBtnCheckbox.addEventListener('change', () => {
-    document.querySelector('body').classList.toggle('no-scrollbar');
-    const mainContainerStyle = document.getElementById('main').style;
-
-    if (menuBtnCheckbox.checked) {
-      mainContainerStyle.display = 'none';
-    } else {
-      mainContainerStyle.display = 'block';
-    }
-  });
-
   // Reading progress bar
 
   const progressBar = document.querySelector('.reading-progress-bar');
@@ -132,167 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setProgress();
   }
 
-  // Jump to top arrow
-
-  const scrollUpArrow = document.querySelector('.scroll-up-arrow');
-
-  if (scrollUpArrow) {
-    scrollUpArrow.addEventListener('click', scrollToTop);
-    scrollUpArrow.addEventListener('keyup', (e) => {
-      e.preventDefault();
-      if (e.keyCode === 13) {
-        scrollToTop();
-      }
-    });
-  }
-
-  document.addEventListener('scroll', () => {
-    const scrollTop = htmlElement.scrollTop;
-
-    if (scrollUpArrow) {
-      const shouldDisplay = scrollTop * 3 >= window.innerHeight;
-
-      if (shouldDisplay) {
-        scrollUpArrow.classList.add('visible');
-      } else {
-        scrollUpArrow.classList.remove('visible');
-      }
-    }
-  });
-
-  // Expand / collapse post archives
-
-  const yearHeadingSelector = '.year-heading';
-  const postLists = document.querySelectorAll('.archive .list');
-
-  const archiveYearHeadings = document.querySelectorAll(
-    `.archive ${yearHeadingSelector}`,
-  );
-
-  const handleArchiveToggle = (e) => {
-    const clickedHeading = e.target.closest(yearHeadingSelector);
-    const year = clickedHeading.getAttribute('id').split('-')[1];
-    clickedHeading.classList.toggle('hidden');
-    document
-      .getElementsByClassName(`posts-${year}`)[0]
-      .classList.toggle('hidden');
-  };
-
-  const handleArchiveToggleFromKeyboard = (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-      handleArchiveToggle(e);
-    }
-  };
-
-  if (postLists && postLists.length > 0) {
-    for (const listItem of postLists) {
-      listItem.classList.add('hidden');
-    }
-
-    for (const heading of archiveYearHeadings) {
-      heading.classList.add('clickable', 'hidden');
-      heading.addEventListener('click', handleArchiveToggle);
-      heading.addEventListener('keyup', handleArchiveToggleFromKeyboard);
-    }
-
-    postLists[0].classList.remove('hidden');
-    archiveYearHeadings[0].classList.remove('hidden');
-  }
-
-  // Pagination - page number numerical input + jump button
-
-  const pageNumberForm = document.querySelector('.jump-to-page-form');
-  const pageNumberInput = document.querySelector('.page-number-input');
-  const jumpButton = document.querySelector('.jump-button');
-
-  const enableJumpButton = () => {
-    jumpButton.removeAttribute('disabled');
-  };
-
-  const disableJumpButton = () => {
-    jumpButton.setAttribute('disabled', '');
-  };
-
-  const handleRedirect = (pageNumber) => {
-    const pageUrl = window.location.href
-      .split(/\/[0-9]+\//)[0]
-      .replace(/\/+$/, '');
-
-    const newLocation =
-      pageNumber === 1 ? pageUrl : `${pageUrl}/${pageNumber}/`;
-
-    window.location.href = newLocation;
-  };
-
-  if (pageNumberForm) {
-    let cachedPageNumber;
-    const currentPageNumber = parseInt(pageNumberInput.value);
-
-    const totalPages = parseInt(
-      document.querySelector('.total-pages').innerHTML,
-    );
-
-    const isPageNumberAllowed = (pageNumber) => {
-      const pageNumberInteger = parseInt(pageNumber) || pageNumber;
-
-      return (
-        pageNumberInteger > 0 &&
-        pageNumberInteger <= totalPages &&
-        pageNumberInteger.toString().length <= totalPages.toString().length
-      );
-    };
-    const isPageNumberDifferent = (pageNumber) => {
-      const pageNumberInteger = parseInt(pageNumber) || pageNumber;
-      return pageNumberInteger !== currentPageNumber;
-    };
-
-    const handlePageChange = () => {
-      const newPageNumber = parseInt(pageNumberInput.value);
-      const canRedirect = isPageNumberAllowed(newPageNumber);
-
-      if (canRedirect) {
-        handleRedirect(newPageNumber);
-      }
-    };
-
-    pageNumberInput.addEventListener('focus', (event) => {
-      cachedPageNumber = parseInt(event.currentTarget.value);
-      pageNumberInput.value = '';
-    });
-
-    pageNumberInput.addEventListener('blur', () => {
-      if (!pageNumberInput.value) {
-        pageNumberInput.value = cachedPageNumber;
-      }
-    });
-
-    pageNumberInput.addEventListener('input', (event) => {
-      const typedValue = event.currentTarget.value;
-
-      const legitPageNumber = isPageNumberAllowed(typedValue);
-      const differentPageNumber = isPageNumberDifferent(typedValue);
-
-      if (legitPageNumber && differentPageNumber) {
-        enableJumpButton();
-      } else {
-        disableJumpButton();
-
-        if (differentPageNumber) {
-          const truncatedPageNumber = typedValue.slice(0, -1);
-          pageNumberInput.value = truncatedPageNumber;
-          if (truncatedPageNumber) enableJumpButton();
-        }
-      }
-    });
-
-    pageNumberForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      handlePageChange();
-    });
-  }
-
-  // Mastodon share button
+  // TODO: Mastodon share button
 
   const mastodonShareForm = htmlElement.querySelector(
     '.share-buttons .mastodon-share-form',

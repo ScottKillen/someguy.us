@@ -2,7 +2,9 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "{%- if title -%}{{ title }}{%- else -%}{{ site.title }}{%- endif -%}",
+        "headline": "{%- if title -%}{{ title }}
+{%- else -%}{{ site.title }}
+{%- endif -%}",
         "image": ["{{ ogImage }}"],
         "author": {
             "@type": "Person",
@@ -13,4 +15,6 @@
         "description": "{{ pageDescription }}"
     }
 {% endset -%}
-<script type="application/ld+json">{{ jsonLD | minifyInlineJSON | safe }}</script>
+<script type="application/ld+json">
+  {{ jsonLD | minifyInlineJSON | safe }}
+</script>

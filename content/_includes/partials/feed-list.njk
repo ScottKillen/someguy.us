@@ -1,35 +1,33 @@
 <div class="feed-list">
-  <ul>
-    <li>
-      <a href="{{ siteConfig.feed.excerpts.path }}">
-        {% svgUse "rss", "bi" %}
-        <span class="name">{{ siteConfig.feed.excerpts.title }}</span>
+  <ul class="list-unstyled ms-3">
+    <li class="mb-1">
+      <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ siteConfig.feed.excerpts.path }}">
+        {% icon 'rss', 'class' = 'bi align-middle me-2' %}
+        {{ siteConfig.feed.excerpts.title }}
       </a>
     </li>
-    <li>
-      <a href="{{ siteConfig.feed.full.path }}">
-        {% svgUse "rss", "bi" %}
-        <span class="name">{{ siteConfig.feed.full.title }}</span>
+    <li class="mb-1">
+      <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ siteConfig.feed.full.path }}">
+        {% icon 'rss', 'class' = 'bi align-middle me-2' %}
+        {{ siteConfig.feed.full.title }}
       </a>
     </li>
-    <li>
-      <a href="{{ siteConfig.json.excerpts.path }}">
-        {% svgUse "json-feed", "bi" %}
-        <span class="name">{{ siteConfig.json.excerpts.title }}</span>
+    <li class="mb-1">
+      <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ siteConfig.json.excerpts.path }}">
+        {% icon 'json-feed', 'class' = 'bi align-middle me-2' %}
+        {{ siteConfig.json.excerpts.title }}
       </a>
     </li>
-    <li>
-      <a href="{{ siteConfig.json.full.path }}">
-        {% svgUse "json-feed", "bi" %}
-        <span class="name">{{ siteConfig.json.full.title }}</span>
+    <li class="mb-1">
+      <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ siteConfig.json.full.path }}">
+        {% icon 'json-feed', 'class' = 'bi align-middle me-2' %}
+        {{ siteConfig.json.full.title }}
       </a>
     </li>
-    <li>
-      <a href="{{ siteConfig.twtxt.path }}">
-        <span class="twtxt-logo">
-          {% svgUse "twtxt", "bi" %}
-        </span>
-        <span class="name">{{ siteConfig.twtxt.title }}</span>
+    <li class="mb-1">
+      <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="{{ siteConfig.twtxt.path }}">
+        {% icon 'twtxt', 'class' = 'bi align-middle me-2' %}
+        {{ siteConfig.twtxt.title }}
       </a>
     </li>
   </ul>

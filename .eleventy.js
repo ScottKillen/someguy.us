@@ -12,6 +12,7 @@ const minifyHTML = require('./_11ty/transforms/minifyHTML');
 const minifyJS = require('./_11ty/transforms/minifyJS');
 const minifyJSON = require('./_11ty/transforms/minifyJSON');
 const minifyXML = require('./_11ty/transforms/minifyXML');
+const passthroughFiles = require('./content/_data/passthroughFiles');
 
 module.exports = function (eleventyConfig) {
   // --- Initial config
@@ -49,11 +50,34 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(name, body);
   });
 
+  eleventyConfig.addShortcode('icon', function icon(name, kwargs) {
+    this.ctx.page.icons ||= new Set();
+    this.ctx.page.icons.add(name);
+    // eslint-disable-next-line no-unused-vars
+    const { __keywords, ...attrs } = kwargs ?? {};
+    const attributes = Object.entries(attrs)
+      .map(([name, value]) => `${name}="${value}"`)
+      .join(' ');
+    return `<svg ${attributes}><use href="#${name}-icon"></use></svg>`;
+  });
+
+  eleventyConfig.addShortcode('img', function img(url, kwargs) {
+    // eslint-disable-next-line no-unused-vars
+    const { __keywords, ...attrs } = kwargs ?? {};
+    const attributes = Object.entries(attrs)
+      .map(([name, value]) => `${name}="${value}"`)
+      .join(' ');
+    return `<img src="${url}" ${attributes} />`;
+  });
+
   // --- Plugins
 
   Object.values(plugins).forEach(({ body, options }) => {
     eleventyConfig.addPlugin(body, options && options);
   });
+
+  // - Passthough copy
+  eleventyConfig.addPassthroughCopy(passthroughFiles);
 
   // --- After build events
 

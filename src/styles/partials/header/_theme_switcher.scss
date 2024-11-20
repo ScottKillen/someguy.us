@@ -1,7 +1,7 @@
 [data-bs-theme-toggle] {
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,6 @@
     box-sizing: border-box;
     width: 1.5rem;
     height: 1.5rem;
-    fill: var(--theme-switcher-color);
     @include transition(opacity);
   }
 
@@ -61,19 +60,13 @@
   }
 }
 
-.theme-toggle--toggled[data-bs-theme-toggle]
-  .theme-toggle__classic
-  :first-child
-  path {
+.theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__classic :first-child path {
   d: path('M-12 5h30a1 1 0 0 0 9 13v24h-39Z');
   transition-delay: calc(var(--theme-toggle__classic--duration) * 0.2);
 }
 
 @supports not (d: path('')) {
-  .theme-toggle--toggled[data-bs-theme-toggle]
-    .theme-toggle__classic
-    :first-child
-    path {
+  .theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__classic :first-child path {
     transform: translate3d(-12px, 10px, 0);
   }
 }

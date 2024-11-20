@@ -1,19 +1,25 @@
-.myphoto {
-  display: block;
-  float: right;
-  margin: 0 0 0.7rem 0.7rem;
-  width: 100%;
-  max-width: 16rem;
-  border: var(--top-meta-color) 0.25rem solid;
-    box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+.author-image {
+  img {
+    width: 8em;
+    height: 8em;
     border-radius: 50%;
-    -webkit-shape-outside: circle();
-    shape-outside: circle();
+    filter: grayscale(100%);
+    box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+  }
 }
 
-@include mobile {
-  .myphoto {
-    float: none;
-    margin: 2rem auto;
-  }
+.about-logo {
+  --diameter: 18rem;
+  display: block;
+  float: right;
+  box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+  -webkit-shape-outside: circle();
+  shape-outside: circle();
+  width: 100%;
+  max-width: var(--diameter);
+  height: var(--diameter);
+}
+
+.author-info {
+  box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
 }

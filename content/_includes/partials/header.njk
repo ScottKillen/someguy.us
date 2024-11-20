@@ -1,7 +1,6 @@
-{% include "partials/header/skip-link.njk" %}
-{% include "svg-sprite.svg" %}
-<header class="header">
-  {% include "partials/header/hamburger.njk" %}
-  {% include "partials/header/main-nav.njk" %}
-  {% include "partials/header/theme-switcher.njk" %}
+<header class="navbar fixed-top navbar-expand-lg">
+  <nav class="container text-font-sans">
+  {% include "partials/header/site-branding.njk" %}
+  {% include "partials/header/collapsible.njk" %}
+  </nav>
 </header>

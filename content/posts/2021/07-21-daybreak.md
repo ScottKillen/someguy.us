@@ -4,11 +4,11 @@ description: A poem about awakening and renewal at morning.
 excerpt: A poem about awakening and renewal at morning.
 date: 2021-07-21
 tags:
-  - poetry
   - awakening
   - renewal
   - morning
 poem: true
+type: poetry
 image:
   src: /images/daybreak.jpg
   alt: The sun on the horizon.

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html{% if siteConfig.site.language %} lang="{{ siteConfig.site.language }}" {% endif %}{% if siteConfig.site.dir %} dir="{{ siteConfig.site.dir }}" {% endif %}class="no-js">
+<html lang="en" dir="ltr" class="no-js">
   <head>
     {% include "partials/head.njk" %}
   </head>
   <body
     class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+    {% include "partials/no-flash.njk" %}
+    {% include "partials/header/skip-link.njk" %}
+    {% include "partials/icon-sprite-sheet.njk" %}
     {% include "partials/header.njk" %}
-    <div id="main" class="container{% if hasAsides %} with-asides{% endif %}">
+    <main id="content" class="container">
       {{ content|safe }}
-      {% include "partials/footer.njk" %}
-    </div>
+    </main>
+    {% include "partials/scripts.njk" %}
   </body>
 </html>

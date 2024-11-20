@@ -4,10 +4,10 @@ description: A haiku.
 excerpt: A haiku.
 date: 2020-11-22
 tags:
-  - poetry
   - haiku
   - humor
 poem: true
+type: poetry
 image:
   src: /images/sheep.jpg
   alt: A wolf tries to sleep.

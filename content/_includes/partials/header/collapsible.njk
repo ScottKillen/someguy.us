@@ -1,0 +1,7 @@
+{%- set collapseID = "navbarCollapse" -%}
+{%- set navPages = collections.all | eleventyNavigation -%}
+{% include "partials/header/collapisible/toggler.njk" %}
+<div class="collapse navbar-collapse justify-content-between" id="{{ collapseID }}">
+  {% include "partials/header/collapisible/page-menu.njk" %}
+  {% include "partials/header/collapisible/theme-switcher.njk" %}
+</div>

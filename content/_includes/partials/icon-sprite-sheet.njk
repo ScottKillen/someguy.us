@@ -1,0 +1,9 @@
+{% if page.icons %}
+<svg id="icon-sprite-sheet">
+    {% for icon in icons -%}
+      {%- if page.icons.has(icon.slug) -%}
+        {{ icon.symbol | safe }}
+      {%- endif -%}
+    {%- endfor -%}
+</svg>
+{% endif %}

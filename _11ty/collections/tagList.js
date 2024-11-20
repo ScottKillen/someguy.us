@@ -1,21 +1,20 @@
 const moduleName = require('../helpers/moduleName');
 const { EXCLUDED_TAGS } = require('../constants');
-const siteConfig = require('../../content/_data/siteConfig');
-
-const { language, options } = siteConfig.localeSort;
 
 module.exports = {
   name: moduleName(__filename),
   body: (collectionApi) => {
-    const tagsSet = new Set();
+    const tagsMap = new Map();
     collectionApi.getAll().forEach((item) => {
       if (!item.data.tags) return;
       item.data.tags
         .filter((tag) => !EXCLUDED_TAGS.includes(tag))
-        .forEach((tag) => tagsSet.add(tag));
+        .forEach((tag) => {
+          tagsMap.set(tag, (tagsMap.get(tag) || 0) + 1);
+        });
     });
-    return Array.from(tagsSet).sort((a, b) =>
-      a.localeCompare(b, language, options)
-    );
+    return Array.from(tagsMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map((entry) => entry[0]);
   },
 };

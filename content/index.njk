@@ -8,14 +8,25 @@ pagination:
 permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---
 
-<div class="post-list">
-  <ul>
-  {% for post in posts %}
-    <li>
-      {% include "partials/single-post-excerpt.njk" %}
-    </li>
-  {% endfor %}
-  </ul>
+<div class="row">
+  <div class="col-4 col-left">
+    <div class="sticky-top">
+      <h2 id='tags'>Search by topic...</h2>
+      {% include "partials/tag-cloud.njk" %}
+      <a class="fs-5 mb-2 link-offset-3 link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="/tags/" title="All topics'">
+      All&nbsptopics
+    </a>
+    </div>
+  </div>
+  <div class="col-8 h-feed container post-list col-right">
+    <ul class="sticky-top">
+      {% for post in posts %}
+        <li>
+          {% include "partials/single-post-excerpt.njk" %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% include "partials/scroll-up-arrow.njk" %}
@@ -23,6 +34,12 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
 {%- set totalPages = pagination.pages|length -%}
 {%- set currentPage = pagination.pageNumber + 1 -%}
 {%- set previousHref = pagination.href.previous -%}
+{%- set firstHref = pagination.href.first -%}
 {%- set nextHref = pagination.href.next -%}
+{%- set lastHref = pagination.href.last -%}
 
+{%- set paginationComponent %}
 {% include "partials/pagination.njk" %}
+{%- endset -%}
+
+{% include "partials/footer.njk" %}

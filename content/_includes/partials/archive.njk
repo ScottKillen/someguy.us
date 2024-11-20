@@ -1,18 +1,18 @@
-<ul class="archive">
+<ul class="archive list-unstyled ms-3">
   {% for yearlyArchive in collections.publishedPosts | groupByYear %}
     <li>
-      <h3 tabindex='0' class="year-heading" id="year-{{ yearlyArchive.year }}">
-        {% emoji "▼", "arrow" %} <time>{{ yearlyArchive.year }}</time>
+      <h3 class="mb-1 year-heading" id="year-{{ yearlyArchive.year }}">
+        <time>{{ yearlyArchive.year }}</time>
       </h3>
-      <ul class="list posts-{{ yearlyArchive.year }}"> 
+      <ul class="mb-4 ms-3 list-unstyled list posts-{{ yearlyArchive.year }}">
       {% for post in yearlyArchive.posts %}
-        <li class="post">
-          <time>{{ post.date | archivePageDate }}</time>
-          <a href="{{ post.url }}">
+        <li class="post row mb-2">
+          <a class="col-md-6 link-body-emphasis link-offset-2 link-offset-3-hover" href="{{ post.url }}">
             <span>
               {{ post.data.title }}
             </span>
           </a>
+          <time class="col-md-2 text-secondary">{{ post.date | archivePageDate }}</time>
         </li>
       {% endfor %}
       </ul>
