@@ -5,3 +5,11 @@
   display: none;
   box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
 }
+
+.scroll-up-arrow {
+  .bi {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--background-color);
+  }
+}

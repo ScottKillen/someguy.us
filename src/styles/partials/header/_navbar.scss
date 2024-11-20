@@ -1,6 +1,5 @@
 header {
   .active {
-
     .nav-link {
       text-decoration: underline;
     }
@@ -22,5 +21,29 @@ header {
     -webkite-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(var(--bs-body-bg-rbg), 0.8);
+  }
+}
+
+.site-logo {
+  filter: drop-shadow(3px 4px 7px rgba($black, 0.4));
+  width: 100%;
+  --diameter: 5rem;
+  max-width: var(--diameter);
+  height: var(--diameter);
+}
+
+.navbar-brand {
+  text-shadow: 2px 2px 4px rgba($black, 0.4);
+}
+
+body {
+  padding-top: 140px;
+}
+
+main>.row {
+  .col-left {
+    .sticky-top {
+      top: 140px;
+    }
   }
 }
