@@ -25,14 +25,6 @@ module.exports = {
     // $menuBreakpoint variable in _variables.scss
     // so that site title and menu items remain within a single line.
     logo: '/images/logo.png',
-    // Default language of the site. Used in 'lang' attribute of <html> element
-    // If none is provided, no 'lang' attribute will be used.
-    language: 'en',
-    // The year this site was created. Can be used in the footer in conjuction
-    // with {% currentYear %} expression
-    // so that you don't have to update the copyright year
-    // in your footer by hand ever again :)
-    startYear: 2018,
     // Generator information to display in <html> tag and the site footer.
     // Absolutely optional, but it will make Zach Leatherman happy :)
     // Also, it makes you eligible to be featured on Speedlify:
@@ -42,25 +34,6 @@ module.exports = {
       version: packageJson.dependencies['@11ty/eleventy'].replace('^', ''),
       url: 'https://11ty.dev',
     },
-    // Directionality of the element's text specified
-    // with <html> 'dir' attribute. Available options:
-    // 'ltr' - left to right (like English)
-    // 'rtl' - right to left (like Arabic)
-    // 'auto - let the user agent decide
-    dir: 'ltr',
-    // Information about this template.
-    // Absolutely optional, but as an author of this template I'll be
-    // super happy if you keep it intact :)
-    // And if you decide to remove it after all, be sure to edit
-    // content/_includes/footer.njk as well
-    template: {
-      name: 'Bliss',
-      url: 'https://github.com/lwojcik/eleventy-template-bliss',
-      credit: {
-        name: 'Łukasz Wójcik',
-        url: 'https://lukaszwojcik.net/',
-      },
-    },
   },
   // ---------------------------------------------------------------------------
   // Information about YOU, the site author
@@ -69,6 +42,7 @@ module.exports = {
     // Your name. Self-explanatory I guess?
     // And you can use it anywhere on the site as {{ siteConfig.author.name }}
     name: 'Scott Killen',
+    url: 'https://scottkillen.com/',
     // Your fediverse links (e.g. Mastodon). You can provide more than one.
     // For the first account in this array your site will generate
     // .well-known/webfinger file for you so that you'll be searchable
@@ -135,9 +109,9 @@ module.exports = {
     // edit content/_data/utils/og-image.njk
     enableImageGeneration: true,
     // Background color for auto-generated OpenGraph images
-    ogImageBackgroundColor: '#5E409D',
+    ogImageBackgroundColor: '#6610f2',
     // Text color for for auto-generated OpenGraph images
-    ogImageTextColor: '#fffcf0',
+    ogImageTextColor: '#f8f9fa',
   },
   // ---------------------------------------------------------------------------
   // Default settings for X graph tags
@@ -151,8 +125,6 @@ module.exports = {
   // Settings for post tags
   // ---------------------------------------------------------------------------
   tags: {
-    // If true, tag list will be displayed on the archive page
-    displayOnArchivePage: true,
     // If true tags will be displayed below the content of the article
     displayOnPostPage: true,
     // URL prefix for tag pages. If you set 'tag' as your tag prefix,
@@ -165,14 +137,9 @@ module.exports = {
   // Settings for PWA
   // ---------------------------------------------------------------------------
   manifestJson: {
-    // Language of PWA application
-    language: 'en-US',
     // Default theme color for PWA application. Affects how the OS displays
     // the site
-    themeColor: '#5E409D',
-    // Placeholder background color for the application page to display
-    // before its stylesheet is loaded
-    backgroundColor: '#5E409D',
+    themeColor: '#6610f2',
   },
   // ---------------------------------------------------------------------------
   // Settings for post share buttons
@@ -214,7 +181,7 @@ module.exports = {
       // Color of the links on the site. Since XSLT stylesheet is a separate
       // entity from the rest of the site styling, it has to be
       // specified manually
-      baseColor: '#5E409D',
+      baseColor: '#6610f2',
     },
     // Settings for RSS feed displaying post excerpts
     excerpts: {
@@ -291,19 +258,6 @@ module.exports = {
     svg: '/favicon.svg',
     i192: '/icon-192.png',
     i512: '/icon-512.png',
-  },
-  // ---------------------------------------------------------------------------
-  // Locale-based sorting options (mostly for tags)
-  // ---------------------------------------------------------------------------
-  localeSort: {
-    // Base language used for locale-based sorting
-    // If you don't use characters with diacritic marks in your language,
-    // you can probably leave this unchanged
-    language: 'en',
-    // Options for localeCompare tag sorting method
-    options: {
-      sensitivity: 'base',
-    },
   },
   // ---------------------------------------------------------------------------
   // Other options
