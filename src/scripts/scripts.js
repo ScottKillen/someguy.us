@@ -17,16 +17,6 @@ const setTheme = (theme) => {
   }
 };
 
-const getScrollPercent = () => {
-  const htmlElement = document.documentElement;
-  const body = document.body;
-  const scrollTop = htmlElement.scrollTop || body.scrollTop;
-  const scrollHeight = htmlElement.scrollHeight || body.scrollHeight;
-  const clientHeight = htmlElement.clientHeight;
-
-  return (scrollTop / (scrollHeight - clientHeight)) * 100;
-};
-
 window.addEventListener('DOMContentLoaded', () => {
   const htmlElement = document.querySelector('html');
 
@@ -83,21 +73,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   themeSwitcherBtn.addEventListener('click', handleThemeSwitch);
   themeSwitcherBtn.addEventListener('keyup', handleThemeSwitchFromKeyboard);
-
-  // Reading progress bar
-
-  const progressBar = document.querySelector('.reading-progress-bar');
-
-  if (progressBar) {
-    const setProgress = () => {
-      const width = getScrollPercent();
-      progressBar.style.width = width + '%';
-    };
-
-    window.addEventListener('scroll', setProgress);
-
-    setProgress();
-  }
 
   // TODO: Mastodon share button
 

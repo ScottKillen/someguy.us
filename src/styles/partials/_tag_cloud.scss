@@ -4,4 +4,8 @@
       background: #6c757d;
     }
   }
+
+  &>a {
+    font-family: var(--font-family-sans);
+  }
 }

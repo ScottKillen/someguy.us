@@ -1,2 +1,5 @@
-@import 'partials';
-@import 'pages';
+@import 'partials', 'pages';
+
+hr {
+  width: 55%;
+}
