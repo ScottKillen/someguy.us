@@ -1,12 +1,3 @@
-{%- set wordCount -%}{{ content | striptags | wordcount }}{%- endset -%}
-{%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
-<div class="top-meta">
+<div class="top-meta text-secondary text-font-sans float-end">
   <time>{{ date|readableDate }}</time>
-  {% if siteConfig.showPostLength == 'time' %}
-  <span class="separator">•</span>
-  <span data-tooltip="{{ wordCount }} words" class="tooltip-bottom reading-time">{{ readingTime }} min read</span>
-  {% elif siteConfig.showPostLength == 'count' %}
-  <span class="separator">•</span>
-  <span class="reading-time">ca. {{ wordCount|round }} words</span>
-  {% endif %}
 </div>

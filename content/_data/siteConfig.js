@@ -259,12 +259,4 @@ module.exports = {
     i192: '/icon-192.png',
     i512: '/icon-512.png',
   },
-  // ---------------------------------------------------------------------------
-  // Other options
-  // ---------------------------------------------------------------------------
-  // Enable reading progress bar on article pages
-  enableReadingProgressBar: true,
-  // Show post length as word count ('count'), reading time ('time') or disable
-  // it completely (false)
-  showPostLength: 'time',
 };

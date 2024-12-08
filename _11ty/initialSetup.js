@@ -1,10 +1,16 @@
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItFootnote = require('markdown-it-footnote');
-const { asidePlugin } = require('@humanwhocodes/markdown-it-markua-aside');
+const bracketedSpans = require('markdown-it-bracketed-spans');
+const markdownItAttrs = require('markdown-it-attrs');
 const kbd = require('markdown-it-kbd');
+const mark = require('markdown-it-mark');
 const slugify = require('slugify');
 const abbr = require('markdown-it-abbr');
+const markdownItContainer = require('markdown-it-container');
+const markdownItIns = require('markdown-it-ins');
+const alerts = require('markdown-it-alerts');
+const toc = require('markdown-it-toc-done-right');
 const {
   ASSETS_FOLDER,
   SCRIPTS_FOLDER,
@@ -29,13 +35,20 @@ module.exports = function (eleventyConfig) {
     markdownIt(MARKDOWN_IT_OPTIONS)
       .use(markdownItAnchor, MARKDOWN_IT_ANCHOR_OPTIONS)
       .use(markdownItFootnote)
-      .use(asidePlugin)
       .use(kbd)
-      .use(abbr),
+      .use(alerts)
+      .use(mark)
+      .use(bracketedSpans)
+      .use(markdownItAttrs)
+      .use(toc)
+      .use(abbr)
+      .use(markdownItContainer, 'epigraph')
+      .use(markdownItContainer, 'footer')
+      .use(markdownItIns),
   );
 
   eleventyConfig.addPassthroughCopy({
     [ASSETS_FOLDER]: './',
-    [SCRIPTS_FOLDER]: './js',
+    [SCRIPTS_FOLDER]: './/js',
   });
 };

@@ -1,4 +1,4 @@
-<div class="tag-cloud text-font-sans">
+<div class="tag-cloud">
   {% for tag in collections.tagCloud %}
     {%- set tagUrl -%}/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag | slugify }}/{%- endset -%}
     <a class="btn btn-primary border border-primary ms-0 me-1 mb-2" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'">
