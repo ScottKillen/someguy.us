@@ -4,9 +4,13 @@ const markdownItFootnote = require('markdown-it-footnote');
 const bracketedSpans = require('markdown-it-bracketed-spans');
 const markdownItAttrs = require('markdown-it-attrs');
 const kbd = require('markdown-it-kbd');
+const mark = require('markdown-it-mark');
 const slugify = require('slugify');
 const abbr = require('markdown-it-abbr');
 const markdownItContainer = require('markdown-it-container');
+const markdownItIns = require('markdown-it-ins');
+const alerts = require('markdown-it-alerts');
+const toc = require('markdown-it-toc-done-right');
 const {
   ASSETS_FOLDER,
   SCRIPTS_FOLDER,
@@ -32,11 +36,15 @@ module.exports = function (eleventyConfig) {
       .use(markdownItAnchor, MARKDOWN_IT_ANCHOR_OPTIONS)
       .use(markdownItFootnote)
       .use(kbd)
+      .use(alerts)
+      .use(mark)
       .use(bracketedSpans)
       .use(markdownItAttrs)
+      .use(toc)
       .use(abbr)
       .use(markdownItContainer, 'epigraph')
-      .use(markdownItContainer, 'footer'),
+      .use(markdownItContainer, 'footer')
+      .use(markdownItIns),
   );
 
   eleventyConfig.addPassthroughCopy({

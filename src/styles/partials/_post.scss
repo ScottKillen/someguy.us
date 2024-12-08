@@ -61,6 +61,7 @@
 
   &>p,
   &>footer,
+  &>.alert,
   &>table {
     width: 55%;
   }
@@ -137,6 +138,7 @@
     }
   }
 
+  p.fullwidth,
   div.fullwidth,
   table.fullwidth {
     width: 100%;
