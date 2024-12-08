@@ -29,6 +29,11 @@ const MARKDOWN_IT_ANCHOR_OPTIONS = {
   decamelize: false,
 };
 
+const MARKDOWN_IT_TOC_OPTIONS = {
+  linkClass:
+    'link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover',
+};
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary(
     'md',
@@ -40,7 +45,7 @@ module.exports = function (eleventyConfig) {
       .use(mark)
       .use(bracketedSpans)
       .use(markdownItAttrs)
-      .use(toc)
+      .use(toc, MARKDOWN_IT_TOC_OPTIONS)
       .use(abbr)
       .use(markdownItContainer, 'epigraph')
       .use(markdownItContainer, 'footer')

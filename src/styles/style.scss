@@ -3,3 +3,22 @@
 hr {
   width: 55%;
 }
+
+body {
+  scroll-behavior: smooth;
+}
+
+.table-of-contents {
+  ol {
+    counter-reset: list-item;
+  }
+
+  li {
+    display: block;
+    counter-increment: list-item;
+  }
+
+  li:before {
+    content: counters(list-item, '.') ' ';
+  }
+}
