@@ -1,0 +1,17 @@
+.table-of-contents {
+
+  ol {
+    counter-reset: list-item;
+    font-size: 1.3rem;
+    line-height: 1.86rem;
+  }
+
+  li {
+    display: block;
+    counter-increment: list-item;
+  }
+
+  li:before {
+    content: counters(list-item, '.') ' ';
+  }
+}
