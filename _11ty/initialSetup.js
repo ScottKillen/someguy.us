@@ -1,16 +1,19 @@
 const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItFootnote = require('markdown-it-footnote');
-const bracketedSpans = require('markdown-it-bracketed-spans');
-const markdownItAttrs = require('markdown-it-attrs');
-const kbd = require('markdown-it-kbd');
-const mark = require('markdown-it-mark');
+
+const abbrPlugin = require('markdown-it-abbr');
+const alertsPlugin = require('markdown-it-alerts');
+const anchorPlugin = require('markdown-it-anchor');
+const attrsPlugin = require('markdown-it-attrs');
+const bracketedSpansPlugin = require('markdown-it-bracketed-spans');
+const containerPlugin = require('markdown-it-container');
+const footnotePlugin = require('markdown-it-footnote');
+const insPlugin = require('markdown-it-ins');
+const kbdPlugin = require('markdown-it-kbd');
+const markPlugin = require('markdown-it-mark');
+const tocPlugin = require('markdown-it-toc-done-right');
+
 const slugify = require('slugify');
-const abbr = require('markdown-it-abbr');
-const markdownItContainer = require('markdown-it-container');
-const markdownItIns = require('markdown-it-ins');
-const alerts = require('markdown-it-alerts');
-const toc = require('markdown-it-toc-done-right');
+
 const {
   ASSETS_FOLDER,
   SCRIPTS_FOLDER,
@@ -38,18 +41,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary(
     'md',
     markdownIt(MARKDOWN_IT_OPTIONS)
-      .use(markdownItAnchor, MARKDOWN_IT_ANCHOR_OPTIONS)
-      .use(markdownItFootnote)
-      .use(kbd)
-      .use(alerts)
-      .use(mark)
-      .use(bracketedSpans)
-      .use(markdownItAttrs)
-      .use(toc, MARKDOWN_IT_TOC_OPTIONS)
-      .use(abbr)
-      .use(markdownItContainer, 'epigraph')
-      .use(markdownItContainer, 'footer')
-      .use(markdownItIns),
+      .use(abbrPlugin)
+      .use(alertsPlugin)
+      .use(anchorPlugin, MARKDOWN_IT_ANCHOR_OPTIONS)
+      .use(attrsPlugin)
+      .use(bracketedSpansPlugin)
+      .use(containerPlugin, 'epigraph')
+      .use(containerPlugin, 'footer')
+      .use(footnotePlugin)
+      .use(insPlugin)
+      .use(kbdPlugin)
+      .use(markPlugin)
+      .use(tocPlugin, MARKDOWN_IT_TOC_OPTIONS),
   );
 
   eleventyConfig.addPassthroughCopy({
