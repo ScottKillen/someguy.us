@@ -13,8 +13,8 @@ pagination:
 
 <h1>Articles tagged as "{{ tag.title }}"</h1>
 
-<div class="post-list">
-  <ul>
+  <div class="h-feed container post-list">
+    <ul class="m-0 p-0 list-unstyled">
   {% for post in tag.items %}
     <li>
       {% include "partials/single-post-excerpt.njk" %}

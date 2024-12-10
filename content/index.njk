@@ -19,7 +19,7 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
     </div>
   </div>
   <div class="col-8 h-feed container post-list col-right">
-    <ul class="sticky-top m-0 p-0 list-unstyled">
+    <ul class="m-0 p-0 list-unstyled">
       {% for post in posts %}
         <li>
           {% include "partials/single-post-excerpt.njk" %}
