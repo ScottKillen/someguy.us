@@ -1,14 +1,13 @@
-{% if siteConfig.tags.displayOnPostPage %}
-<div class="post-tags">
-{% if tags|filterExcludedTags %}
-  <p>Tagged as:</p>
-  <ul>
-  {% for tag in tags|filterExcludedTags %}
-    <li>
-      <a title="Articles tagged as '{{ tag }}'" href="/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag|slugify }}/">{{ tag }}</a>
-    </li>
-  {% endfor %}
-  </ul>
-{% endif %}
+<div class="post-tags  col-md-4">
+  {% if tags | filterExcludedTags %}
+    <p>Tagged as:</p>
+    <div class="tag-cloud">
+      {% for tag in tags | filterExcludedTags %}
+        {%- set tagUrl -%}/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag | slugify }}/{%- endset -%}
+        <a class="btn btn-primary border border-primary ms-0 me-1 mb-2" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'">
+          <span class="name">{{ tag }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>
-{% endif %}

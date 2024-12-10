@@ -125,8 +125,6 @@ module.exports = {
   // Settings for post tags
   // ---------------------------------------------------------------------------
   tags: {
-    // If true tags will be displayed below the content of the article
-    displayOnPostPage: true,
     // URL prefix for tag pages. If you set 'tag' as your tag prefix,
     // your tag pages will look like this: https://yoursite.org/tag/foo
     pageUrlPrefix: 'tags',
