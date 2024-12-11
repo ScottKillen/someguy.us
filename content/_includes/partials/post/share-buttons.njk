@@ -6,19 +6,15 @@
   <div class="share-buttons">
     <p>Share this article:</p>
 
-    {% if 'mastodon' in shareButtons %}
-      {% include "partials/post/mastodon-share-dialog.njk" %}
-    {% endif %}
-
     {% for shareButton in shareButtons %}
       <ul>
 
         {% if shareButton == 'mastodon' %}
           <li>
-            <div data-tooltip="Share on Mastodon - opens prompt window" class="mastodon" tabindex="0">
+            <a target="_blank" rel="noopener noreferrer" data-tooltip="Share on X - opens a new tab" rel="noopener noreferrer" href="/tootpick/#text={{ title }}%0A%0A{{ url }}%0A%0A" class="mastodon">
               {% icon 'mastodon',
               'class' = 'bi' %}
-            </div>
+            </a>
           </li>
         {% endif %}
 
