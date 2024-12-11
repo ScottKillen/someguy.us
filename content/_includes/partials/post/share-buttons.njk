@@ -5,15 +5,15 @@
 {%- set shareButtons = siteConfig.shareButtons -%}
 
 {% if shareButtons | length > 0 %}
-  <div class="share-buttons">
+  <div class="share-buttons col-md-4">
     <p>Share this article:</p>
 
-    {% for shareButton in shareButtons %}
-      <ul>
+    <ul class="list-group list-group-horizontal">
+      {% for shareButton in shareButtons %}
 
         {% if shareButton == 'mastodon' %}
-          <li>
-            <a target="_blank" rel="noopener noreferrer" title="Share on Mastodon - opens a new tab"  href="/tootpick/#text={{ title }}%0A%0A{{ url }}%0A%0A{{ hashTags }}" class="mastodon">
+          <li class="list-group-item">
+            <a target="_blank" rel="noopener noreferrer" title="Share on Mastodon - opens a new tab"  href="/tootpick/#text={{ title }}%0A%0A{{ url }}%0A%0A{{ hashTags }}" class="mastodon link-body-emphasis">
               {% icon 'mastodon',
               'class' = 'bi' %}
             </a>
@@ -21,8 +21,8 @@
         {% endif %}
 
         {% if shareButton == 'x' %}
-          <li>
-            <a target="_blank" rel="noopener noreferrer" title="Share on X - opens a new tab" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}&amp;hashtags={{ csvTags }}" class="x">
+          <li class="list-group-item">
+            <a target="_blank" rel="noopener noreferrer" title="Share on X - opens a new tab" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}&amp;hashtags={{ csvTags }}" class="x link-body-emphasis">
               {% icon 'x',
               'class' = 'bi' %}
             </a>
@@ -30,8 +30,8 @@
         {% endif %}
 
         {% if shareButton == 'linkedin' %}
-          <li>
-            <a target="_blank" rel="noopener noreferrer" title="Share on Linkedin - opens a new tab" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin">
+          <li class="list-group-item">
+            <a target="_blank" rel="noopener noreferrer" title="Share on Linkedin - opens a new tab" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin link-body-emphasis">
               {% icon 'linkedin',
               'class' = 'bi' %}
             </a>
@@ -39,8 +39,8 @@
         {% endif %}
 
         {% if shareButton == 'facebook' %}
-          <li>
-            <a target="_blank" rel="noopener noreferrer" title="Share on Facebook - opens a new tab" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook">
+          <li class="list-group-item">
+            <a target="_blank" rel="noopener noreferrer" title="Share on Facebook - opens a new tab" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook link-body-emphasis">
               {% icon 'facebook',
               'class' = 'bi' %}
             </a>
@@ -48,8 +48,8 @@
         {% endif %}
 
         {% if shareButton == 'hackernews' %}
-          <li>
-            <a target="_blank" rel="noopener noreferrer" title="Share on Hacker News - opens a new tab" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews">
+          <li class="list-group-item">
+            <a target="_blank" rel="noopener noreferrer" title="Share on Hacker News - opens a new tab" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews link-body-emphasis">
               {% icon 'hackernews',
               'class' = 'bi' %}
             </a>
@@ -57,8 +57,8 @@
         {% endif %}
 
         {% if shareButton == 'clipboard' %}
-          <li>
-            <div class="clipboard" rel="noopener noreferrer" title="Click to copyy this post's URL to clipboard" tabindex="0">
+          <li class="list-group-item">
+            <div class="clipboard link-body-emphasis" rel="noopener noreferrer" title="Click to copyy this post's URL to clipboard" tabindex="0">
               {% icon 'clipboard',
               'class' = 'bi' %}
             </div>
