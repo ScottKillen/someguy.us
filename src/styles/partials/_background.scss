@@ -38,24 +38,55 @@ $data-svg-prefix: 'data:image/svg+xml;utf-8,';
   @return null;
 }
 
+@mixin scrimGradient($startColor, $mode, $gridColor, $bgURL) {
+
+  $scrimCoordinates: (0: 1,
+      19: 0.738,
+      34: 0.541,
+      47: 0.382,
+      56.5: 0.278,
+      65: 0.194,
+      73: 0.126,
+      80.2: 0.075,
+      86.1: 0.042,
+      91: 0.021,
+      95.2: 0.008,
+      98.2: 0.002,
+      100: 0);
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop,
+  $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  background-image: linear-gradient(to top, $stops),
+  linear-gradient(to left, $stops),
+  get-background($mode, $gridColor),
+  url($bgURL);
+
+  background-repeat: no-repeat,
+  no-repeat,
+  repeat,
+  no-repeat;
+}
+
 :root,
 [data-bs-theme='light'] {
   body {
-
-    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%),
-      linear-gradient(90deg, transparent, var(--bs-body-bg) 90%),
-      get-background('light', $blue-300),
-      url("/images/lightbg.png");
-    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    @include scrimGradient($white, 'light', $blue-300, "/images/lightbg.png");
     min-height: 100vh;
   }
 }
 
 [data-bs-theme='dark'] {
   body {
-    background-image: linear-gradient(180deg, transparent, var(--bs-body-bg) 90%),
-      linear-gradient(90deg, transparent, var(--bs-body-bg) 90%),
-      get-background('dark', $blue-700),
-      url("/images/darkbg.png");
+
+    @include scrimGradient($gray-900, 'dark', $blue-700, "/images/darkbg.png");
   }
 }
