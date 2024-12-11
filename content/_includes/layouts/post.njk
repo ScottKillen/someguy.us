@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<article class="single-article{% if poem%} poem{% endif %}">
+<article class="single-article{% if poem%} poem{% endif %} border-bottom border-secondary-subtle mb-4 pb-3">
 
   {% include "partials/post/image.njk" %}
 
@@ -20,7 +20,6 @@ layout: base
   {{ content | safe }}
 </article>
 
-{% include "partials/post/author-info.njk" %}
 {% include "partials/post/bottom-meta.njk" %}
 {% include "partials/post/navigation.njk" %}
 {% include "partials/scroll-up-arrow.njk" %}
