@@ -6,9 +6,8 @@ eleventyNavigation:
   order: 2
 ---
 
-{% include "partials/archive.njk" %}
-<hr />
-<div class="mb-3">
-<h2 id='tags'>Tags</h2>
+<div class="row border-bottom">
+  {% include "partials/archive.njk" %}
 </div>
+<h2 class="mb-3" id='tags'>Tags</h2>
 {% include "partials/tag-list.njk" %}
