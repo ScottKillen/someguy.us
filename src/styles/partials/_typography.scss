@@ -10,6 +10,24 @@
     font-family: var(--font-family-sans);
   }
 
+  /* Fluid Superscripts and Subscripts (https://css-tricks.com/fluid-superscripts-and-subscripts/) */
+  @supports (font-size: calc(1em + 1px)) {
+
+    sup,
+    sub {
+      font-size: calc(0.5em + 4px);
+      vertical-align: baseline;
+      position: relative;
+      top: calc(-0.5 * 0.83 * 2 * (1em - 4px));
+      /* Simplified top: calc(-0.83em + 3.32px) */
+    }
+
+    sub {
+      top: calc(0.25 * 0.83 * 2 * (1em - 4px));
+      /* Simplified top: calc(0.42em - 1.66px) */
+    }
+  }
+
   h1,
   .h1,
   h2,
