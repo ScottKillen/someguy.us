@@ -6,14 +6,10 @@ layout: base
 
   {% include "partials/post/image.njk" %}
 
-  <header>
+  <header class="border-bottom border-secondary-subtle mb-4">
+    <h1 class="article-title">{{ title }}</h1>
     {% if subtitle %}
-      <h1 class="article-title">{{ title }}</h1>
-      {% include "partials/post/top-meta.njk" %}
       <p class="subtitle">{{ subtitle }}</p>
-    {% else %}
-      {% include "partials/post/top-meta.njk" %}
-      <h1 class="article-title">{{ title }}</h1>
     {% endif %}
   </header>
   {% include "disclaimers/disclaimer.njk" %}
