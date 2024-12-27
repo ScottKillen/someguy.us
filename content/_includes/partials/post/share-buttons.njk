@@ -13,7 +13,7 @@
 
         {% if shareButton == 'mastodon' %}
           <li class="list-group-item">
-            <a target="_blank" rel="noopener noreferrer" title="Share on Mastodon - opens a new tab"  href="/tootpick/#text={{ title }}%0A%0A{{ url }}%0A%0A{{ hashTags }}" class="mastodon link-body-emphasis">
+            <a target="_blank" rel="noopener noreferrer" data-bs-html="true" data-bs-title="Share on <b>Mastodon</b><br /><small><em>(opens a new tab)</em></small>" title="Share on Mastodon - opens a new tab"  href="/tootpick/#text={{ title }}%0A%0A{{ url }}%0A%0A{{ hashTags }}" class="mastodon link-body-emphasis">
               {% icon 'mastodon',
               'class' = 'bi' %}
             </a>
@@ -22,7 +22,7 @@
 
         {% if shareButton == 'x' %}
           <li class="list-group-item">
-            <a target="_blank" rel="noopener noreferrer" title="Share on X - opens a new tab" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}&amp;hashtags={{ csvTags }}" class="x link-body-emphasis">
+            <a target="_blank" rel="noopener noreferrer" data-bs-html="true" data-bs-title="Share on <b>X</b><br /><small><em>(opens a new tab)</em></small>" title="Share on X - opens a new tab" href="https://x.com/intent/tweet/?text={{ title }}&amp;url={{ url }}&amp;hashtags={{ csvTags }}" class="x link-body-emphasis">
               {% icon 'x',
               'class' = 'bi' %}
             </a>
@@ -31,7 +31,7 @@
 
         {% if shareButton == 'linkedin' %}
           <li class="list-group-item">
-            <a target="_blank" rel="noopener noreferrer" title="Share on Linkedin - opens a new tab" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin link-body-emphasis">
+            <a target="_blank" rel="noopener noreferrer" data-bs-html="true" data-bs-title="Share on <b>LinkedIn</b><br /><small><em>(opens a new tab)</em></small>" title="Share on LinkedIn - opens a new tab" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}" class="linkedin link-body-emphasis">
               {% icon 'linkedin',
               'class' = 'bi' %}
             </a>
@@ -40,7 +40,7 @@
 
         {% if shareButton == 'facebook' %}
           <li class="list-group-item">
-            <a target="_blank" rel="noopener noreferrer" title="Share on Facebook - opens a new tab" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook link-body-emphasis">
+            <a target="_blank" rel="noopener noreferrer" data-bs-html="true" data-bs-title="Share on <b>Facebook</b><br /><small><em>(opens a new tab)</em></small>" title="Share on Facebook - opens a new tab" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" class="facebook link-body-emphasis">
               {% icon 'facebook',
               'class' = 'bi' %}
             </a>
@@ -49,7 +49,7 @@
 
         {% if shareButton == 'hackernews' %}
           <li class="list-group-item">
-            <a target="_blank" rel="noopener noreferrer" title="Share on Hacker News - opens a new tab" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews link-body-emphasis">
+            <a target="_blank" rel="noopener noreferrer" data-bs-html="true" data-bs-title="Share on <b>Hacker News</b><br /><small><em>(opens a new tab)</em></small>" title="Share on Hacker News - opens a new tab" href="https://news.ycombinator.com/submitlink?u={{ url }}&amp;t={{ title }}" class="hackernews link-body-emphasis">
               {% icon 'hackernews',
               'class' = 'bi' %}
             </a>
@@ -58,7 +58,7 @@
 
         {% if shareButton == 'clipboard' %}
           <li class="list-group-item">
-            <div class="clipboard link-body-emphasis" rel="noopener noreferrer" title="Click to copyy this post's URL to clipboard" tabindex="0">
+            <div class="clipboard link-body-emphasis" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em><b>Click</b></em> to copy this post's URL to your clipboard" title="Click to copy this post's URL to your clipboard" tabindex="0">
               {% icon 'clipboard',
               'class' = 'bi' %}
             </div>

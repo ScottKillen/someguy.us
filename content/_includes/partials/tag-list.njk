@@ -2,7 +2,7 @@
   {% for tag in collections.tagList %}
     <div class="col-md-3">
       {%- set tagUrl -%}/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag | slugify }}/{%- endset -%}
-      <p><a class="h4 link-body-emphasis link-offset-2 link-offset-3-hover" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'"><span class="name">{{ tag }}</span></a> <span class="text-primary count">{{ collections[tag]| length }} posts</span></p>
+      <p><a class="h4 link-body-emphasis link-offset-2 link-offset-3-hover" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'" data-bs-html="true" data-bs-title="Articles tagged as '<em>{{ tag }}</em>'"><span class="name">{{ tag }}</span></a> <span class="text-primary count">{{ collections[tag]| length }} posts</span></p>
     </div>
   {% endfor %}
 </div>

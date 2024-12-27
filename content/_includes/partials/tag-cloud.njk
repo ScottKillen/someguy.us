@@ -1,7 +1,7 @@
 <div class="tag-cloud">
   {% for tag in collections.tagCloud %}
     {%- set tagUrl -%}/{{ siteConfig.tags.pageUrlPrefix }}/{{ tag | slugify }}/{%- endset -%}
-    <a class="btn btn-primary border border-primary ms-0 me-1 mb-2" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'">
+    <a class="btn btn-primary border border-primary ms-0 me-1 mb-2" href="{{ tagUrl }}" title="Articles tagged as '{{ tag }}'" data-bs-html="true" data-bs-title="Articles tagged as '<em>{{ tag }}</em>'">
       <span class="name">{{ tag }}</span>
     </a>
   {% endfor %}

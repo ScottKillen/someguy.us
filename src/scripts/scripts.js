@@ -98,4 +98,14 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Enable bootstrap tooltips
+
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"], a',
+  );
+  [...tooltipTriggerList].map(
+    // eslint-disable-next-line no-undef
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),
+  );
 });
