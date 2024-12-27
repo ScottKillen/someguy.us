@@ -154,9 +154,9 @@ module.exports = {
   shareButtons: [
     'mastodon',
     'x',
-    'linkedin',
+    //    'linkedin',
     'facebook',
-    'hackernews',
+    //    'hackernews',
     'clipboard',
   ],
   // ---------------------------------------------------------------------------
