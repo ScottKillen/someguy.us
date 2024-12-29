@@ -4,12 +4,12 @@ layout: base
 
 <article>
   <header class="border-bottom border-secondary-subtle mb-4">
-    <h1 class="page-title">{{ title }}</h1>
+    <h1 class="page-title p-name">{{ title }}</h1>
   </header>
-
   {% include "disclaimers/disclaimer.njk" %}
-
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
 
 </article>
 
