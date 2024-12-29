@@ -1,7 +1,7 @@
 ## Project
 dist/*
 _site/*
-_cache/*
+.cache/*
 .env
 
 ## Node.js
