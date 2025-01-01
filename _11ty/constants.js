@@ -23,5 +23,6 @@ module.exports = {
     replacement: '-',
     lower: true,
     strict: true,
+    remove: /["]/g,
   },
 };
