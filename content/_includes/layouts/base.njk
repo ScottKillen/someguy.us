@@ -4,7 +4,7 @@
     {% include "partials/head.njk" %}
   </head>
   <body
-    class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+    class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %} layout--{{ layout }}">
     {% include "partials/no-flash.njk" %}
     {% include "partials/header/skip-link.njk" %}
     {% include "partials/icon-sprite-sheet.njk" %}
