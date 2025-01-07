@@ -1,21 +1,9 @@
 .page--about {
 
-  .author-image {
-    img {
-      --diameter: 7rem;
-      max-width: var(--diameter);
-      height: var(--diameter);
-      border-radius: 50%;
-      filter: grayscale(100%);
-      box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
-    }
-  }
-
   .about-logo {
     --diameter: 14rem;
     display: block;
     float: right;
-    box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
     -webkit-shape-outside: circle();
     shape-outside: circle();
     width: 100%;
@@ -24,6 +12,15 @@
   }
 
   .author-info {
-    box-shadow: 3px 4px 7px 0px rgba($black, 0.4);
+    .author-image {
+      img {
+        --diameter: 7rem;
+        max-width: var(--diameter);
+        height: var(--diameter);
+        border-radius: 50%;
+        filter: grayscale(100%);
+      }
+    }
+
   }
 }

@@ -1,52 +1,92 @@
-  .sr-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
-  .color-blue {
-    color: $blue;
-  }
+.color-blue {
+  color: $blue;
+}
 
-  .color-indigo {
-    color: $indigo;
-  }
+.color-indigo {
+  color: $indigo;
+}
 
-  .color-purple {
-    color: $purple;
-  }
+.color-purple {
+  color: $purple;
+}
 
-  .color-pink {
-    color: $pink;
-  }
+.color-pink {
+  color: $pink;
+}
 
-  .color-red {
-    color: $red;
-  }
+.color-red {
+  color: $red;
+}
 
-  .color-orange {
-    color: $orange;
-  }
+.color-orange {
+  color: $orange;
+}
 
-  .color-yellow {
-    color: $yellow;
-  }
+.color-yellow {
+  color: $yellow;
+}
 
-  .color-green {
-    color: $green;
-  }
+.color-green {
+  color: $green;
+}
 
-  .color-teal {
-    color: $teal;
-  }
+.color-teal {
+  color: $teal;
+}
 
-  .color-cyan {
-    color: $cyan;
-  }
+.color-cyan {
+  color: $cyan;
+}
 
-  .color-gray {
-    color: $gray-500;
-  }
+.color-gray {
+  color: $gray-500;
+}
+
+:root {
+  --box-shadow-color-rgb: 0, 0, 0;
+}
+
+.shadow-0 {
+  box-shadow: none !important;
+}
+
+.shadow-1 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.12) 0 1px 3px, rgba(var(--box-shadow-color-rgb), 0.24) 0 1px 2px !important;
+}
+
+.shadow-2 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.16) 0 3px 6px, rgba(var(--box-shadow-color-rgb), 0.23) 0 3px 6px !important;
+}
+
+.shadow-3 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.19) 0 10px 20px, rgba(var(--box-shadow-color-rgb), 0.23) 0 6px 6px !important;
+}
+
+.shadow-4 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.25) 0 14px 28px, rgba(var(--box-shadow-color-rgb), 0.22) 0 10px 10px !important;
+}
+
+.shadow-5 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.3) 0 19px 38px, rgba(var(--box-shadow-color-rgb), 0.22) 0 15px 12px !important;
+}
+
+.shadow-6 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.4) 0 29px 52px, rgba(var(--box-shadow-color-rgb), 0.2) 0 25px 16px !important;
+}
+
+.shadow-7 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.5) 0 45px 65px, rgba(var(--box-shadow-color-rgb), 0.16) 0 35px 22px !important;
+}
+
+.shadow-8 {
+  box-shadow: rgba(var(--box-shadow-color-rgb), 0.6) 0 60px 80px, rgba(var(--box-shadow-color-rgb), 0.14) 0 45px 26px !important;
+}

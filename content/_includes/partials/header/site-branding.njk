@@ -1,7 +1,7 @@
 {%- set title = siteConfig.site.title -%}
 <a class="navbar-brand" href="{% if page.url == '/' %}#{% else %}/{% endif %}" title="{{ title }} - Main page">
 {% if siteConfig.site.logo %}
-  <img src="{{ siteConfig.site.logo }}" alt="Site logo" class="rounded-circle border border-2 border-primary-subtle site-logo"/>
+  <img src="{{ siteConfig.site.logo }}" alt="Site logo" class="rounded-circle border border-1 border-primary-subtle site-logo shadow-2"/>
 {% endif %}
   {{ title }}
 </a>

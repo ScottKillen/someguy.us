@@ -70,7 +70,6 @@ header:not(article header) {
 }
 
 .site-logo {
-  filter: drop-shadow(3px 4px 7px rgba($black, 0.4));
   width: 100%;
   --diameter: 5rem;
   max-width: var(--diameter);
