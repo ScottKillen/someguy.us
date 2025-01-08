@@ -93,6 +93,11 @@ module.exports = {
       title: 'X',
       icon: 'x',
     },
+    {
+      url: 'https://killen.omg.lol/',
+      title: 'omg',
+      icon: 'location-smile',
+    },
   ],
   // ---------------------------------------------------------------------------
   // Default settings for OpenGraph functionality (tags and generated images)
