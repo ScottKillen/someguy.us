@@ -1,4 +1,14 @@
 <script>
+  // Navbar scroll effect
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 56) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
   // Back to top button
   const toTopButton = document.getElementById('btn-back-to-top');
   window.addEventListener('scroll', () => {

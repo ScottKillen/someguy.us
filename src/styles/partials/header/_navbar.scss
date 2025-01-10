@@ -1,5 +1,10 @@
-header {
+header.navbar {
   --thickness: 6px;
+  transition: all 0.5s;
+
+  a {
+    transition: all 0s ease 0s;
+  }
 
   .active {
     .nav-link {
@@ -8,16 +13,16 @@ header {
   }
 }
 
-header:not(article header) {
+header.scrolled {
   background: rgba(var(--bs-body-bg-rgb), 0.95);
 }
 
 @supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
-  header:not(article header) {
+  header.navbar.scrolled {
     background: rgba(var(--bs-body-bg-rgb), 0.5)
   }
 
-  .backdrop {
+  .navbar.scrolled .backdrop {
     position: absolute;
     inset: 0;
     -webkit-backdrop-filter: blur(16px);
@@ -29,7 +34,7 @@ header:not(article header) {
     z-index: -1;
   }
 
-  .backdrop-edge {
+  .navbar.scrolled .backdrop-edge {
     position: absolute;
     left: 0;
     right: 0;
@@ -45,7 +50,7 @@ header:not(article header) {
 }
 
 @supports (mask-image: none) or (-webkit-mask-image: none) {
-  .backdrop {
+  .navbar.scrolled .backdrop {
     height: 200%;
     -webkit-mask-image: linear-gradient(to bottom,
         black 0% 50%,
@@ -55,7 +60,7 @@ header:not(article header) {
         transparent 50% 100%);
   }
 
-  .backdrop-edge {
+  .navbar.scrolled .backdrop-edge {
     height: 100%;
     inset: 0;
     -webkit-mask-image: linear-gradient(to bottom,
