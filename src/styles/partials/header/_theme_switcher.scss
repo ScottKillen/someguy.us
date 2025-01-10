@@ -22,20 +22,20 @@
 }
 
 [data-bs-theme-toggle] {
-  --theme-toggle__classic--duration: 500ms;
+  --theme-toggle__expand--duration: 500ms;
 }
 
-.theme-toggle__classic {
+.theme-toggle__expand {
   path {
     transition-timing-function: cubic-bezier(0, 0, 0.15, 1.25);
     transform-origin: center;
-    transition-duration: calc(var(--theme-toggle__classic--duration) * 0.8);
+    transition-duration: calc(var(--theme-toggle__expand--duration) * 0.8);
   }
 
   g {
     path {
       transition-property: opacity, transform;
-      transition-delay: calc(var(--theme-toggle__classic--duration) * 0.2);
+      transition-delay: calc(var(--theme-toggle__expand--duration) * 0.2);
     }
   }
 
@@ -48,7 +48,7 @@
 
 .theme-toggle--toggled {
   &[data-bs-theme-toggle] {
-    .theme-toggle__classic {
+    .theme-toggle__expand {
       g {
         path {
           transform: scale(0.5) rotate(45deg);
@@ -60,13 +60,13 @@
   }
 }
 
-.theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__classic :first-child path {
+.theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__expand :first-child path {
   d: path('M-12 5h30a1 1 0 0 0 9 13v24h-39Z');
-  transition-delay: calc(var(--theme-toggle__classic--duration) * 0.2);
+  transition-delay: calc(var(--theme-toggle__expand--duration) * 0.2);
 }
 
 @supports not (d: path('')) {
-  .theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__classic :first-child path {
+  .theme-toggle--toggled[data-bs-theme-toggle] .theme-toggle__expand :first-child path {
     transform: translate3d(-12px, 10px, 0);
   }
 }
