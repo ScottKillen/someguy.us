@@ -63,10 +63,10 @@
     }
   }
 
-  &>p,
+  & .e-content>p,
   &>footer,
   .top-image,
-  &>.alert,
+  & .e-content>.alert,
   &>table {
     width: 55%;
   }
